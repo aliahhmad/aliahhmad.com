@@ -1,0 +1,59 @@
+import { useNavigate } from "react-router-dom";
+
+function AboutMe() {
+  const navigate = useNavigate();
+  return (
+    <section
+      className="flex flex-col py-2 px-10"
+      style={{
+        backgroundColor: "lab(8.30603% .618212 -2.16573)",
+      }}
+    >
+      <div className="flex flex-col gap-4 text-white">
+        <div className="text-2xl">About Me</div>
+        <div className="flex flex-col gap-2 text-lg opacity-70 ">
+          <p>
+            I'm a full stack developer currently doing my MS in Computer Science
+            at Rochester Institute of Technology (RIT), Rochester, NY — GPA 4.0.
+            Before that, I earned my BS in CS at LUMS (Pakistan) with the High
+            Merit Award and Dean's Honor List recognition every year.
+          </p>
+          <p>
+            I care about building things that work at scale — from LLM-powered
+            features to production-grade full stack systems. Right now I'm
+            diving deep into AI agents and cloud infrastructure.
+          </p>
+          <p>
+            Actively seeking Software Engineering internships and co-ops. If
+            you're hiring, reach out!
+          </p>
+        </div>
+      </div>
+      <div>
+        <hr className="border-t border-white opacity-20 w-full my-4" />
+        <div className="text-white text-lg">
+          <p>
+            <a
+              onClick={() => navigate("/contact")}
+              className=" underline decoration-dotted"
+            >
+              Contact Me
+            </a>{" "}
+            <span className="opacity-70">or say hi on</span>{" "}
+            <a
+              href="https://www.linkedin.com/in/aliahhmad/"
+              className="underline decoration-dotted"
+            >
+              Linked In
+            </a>
+            <span className="opacity-70">{" :)"}</span>
+          </p>
+        </div>
+
+        <hr className="border-t border-white opacity-20 w-full my-4" />
+      </div>
+    </section>
+  );
+}
+
+export default AboutMe;

@@ -1,0 +1,2 @@
+- Review all components code using claud.
+- Use surface-deep colour instead of the lab one.
