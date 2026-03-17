@@ -1,3 +1,4 @@
+// src/components/Experiences.jsx
 import React from "react";
 
 const EXPERIENCES = [
@@ -20,10 +21,7 @@ const EXPERIENCES = [
 
 function Experiences() {
   return (
-    <section
-      className="flex flex-col gap-6 py-2 px-10"
-      style={{ backgroundColor: "lab(8.30603% .618212 -2.16573)" }}
-    >
+    <section className="bg-surface-deep flex flex-col gap-6 py-2 px-10">
       <div className="text-white text-2xl">Experiences</div>
       <div>
         {EXPERIENCES.map((exp) => (

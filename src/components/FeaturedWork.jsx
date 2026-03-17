@@ -1,3 +1,4 @@
+// src/components/FeaturedWork.jsx
 import { useNavigate } from "react-router-dom";
 
 function FeaturedWork() {
@@ -30,22 +31,19 @@ function FeaturedWork() {
   }
 
   return (
-    <section
-      className="flex flex-col gap-6 py-2 px-10"
-      style={{ backgroundColor: "lab(8.30603% .618212 -2.16573)" }}
-    >
+    <section className="bg-surface-deep flex flex-col gap-6 py-2 px-10">
       <div className="text-white text-2xl">Featured Works</div>
-      <div className="flex gap-2 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+      <div className="flex overflow-x-auto overflow-y-visible gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {PROJECTS.map((project) => (
           <div
             key={project.id}
-            className="glass flex-shrink-0 w-64 rounded-xl overflow-hidden text-white cursor-pointer"
+            className="glass-flat flex-shrink-0 w-64 rounded-xl text-white cursor-pointer transition-transform duration-200 hover:scale-[1.01]"
             onClick={() => handleClick(project.path)}
           >
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-40 object-cover"
+              className="w-full h-40 object-cover rounded-t-xl"
             />
             <div className="flex flex-col gap-2 p-4">
               <h3 className="text-lg font-bold">{project.title}</h3>

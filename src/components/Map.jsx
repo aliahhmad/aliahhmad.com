@@ -1,3 +1,4 @@
+// src/components/Map.jsx
 import Map, { Marker } from 'react-map-gl/mapbox'
 import 'mapbox-gl/dist/mapbox-gl.css'
 

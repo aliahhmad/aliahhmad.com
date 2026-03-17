@@ -1,13 +1,11 @@
+// src/components/Connect.jsx
 import { useNavigate } from "react-router-dom";
 
 function AboutMe() {
   const navigate = useNavigate();
   return (
     <section
-      className="flex flex-col py-2 px-10"
-      style={{
-        backgroundColor: "lab(8.30603% .618212 -2.16573)",
-      }}
+      className="bg-surface-deep flex flex-col py-2 px-10"
     >
       <div className="flex flex-col gap-4 text-white">
         <div className="text-2xl">About Me</div>

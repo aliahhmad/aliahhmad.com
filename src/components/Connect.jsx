@@ -1,3 +1,4 @@
+// src/components/Connect.jsx
 import { Github, Linkedin } from "lucide-react";
 
 const SOCIALS = [
@@ -17,10 +18,7 @@ const SOCIALS = [
 
 function Connect() {
   return (
-    <section
-      className="flex flex-col gap-6 py-2 px-10"
-      style={{ backgroundColor: "lab(8.30603% .618212 -2.16573)" }}
-    >
+    <section className="bg-surface-deep flex flex-col gap-6 py-2 px-10">
       <div className="text-white flex flex-col gap-4">
         <div className="text-2xl">Let's connect</div>
         <p className="text-lg opacity-60">
@@ -35,7 +33,7 @@ function Connect() {
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="glass flex items-center gap-2 px-4 py-3 rounded-full text-white text-base cursor-pointer transition-transform duration-200 hover:scale-105"
+            className="glass flex items-center gap-2 px-4 py-3 rounded-full text-white text-base cursor-pointer transition-transform duration-200 hover:scale-[1.03]"
           >
             {social.icon}
             <span>{social.handle}</span>

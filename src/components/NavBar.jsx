@@ -16,7 +16,11 @@ const Navbar = () => {
       path: "/",
       icon: <AccountCircleOutlinedIcon />,
     },
-    { id: "work", label: "Work", path: "/work", icon: <CodeOutlinedIcon /> },
+    { id: "work", 
+      label: "Work", 
+      path: "/work", 
+      icon: <CodeOutlinedIcon /> 
+    },
     {
       id: "blog",
       label: "Blog",
@@ -41,7 +45,7 @@ const Navbar = () => {
         <button
           key={item.id}
           onClick={() => handleClick(item.path)}
-          className="flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-all"
+          className="flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-transform duration-200 hover:scale-[1.05]"
         >
           <span
             style={{

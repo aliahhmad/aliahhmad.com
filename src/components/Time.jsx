@@ -1,3 +1,4 @@
+// src/components/Time.jsx
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import NightlightOutlinedIcon from "@mui/icons-material/NightlightOutlined";
 
@@ -22,7 +23,7 @@ function Time() {
   const isNight = hours >= 20 || hours < 6;
 
   return (
-    <div className="glass relative flex items-center gap-1 px-4 py-2 rounded-xl transition-all w-fit text-sm font-medium text-white">
+    <div className="glass relative flex items-center gap-1 px-4 py-2 rounded-xl w-fit text-sm font-medium text-white">
       {isNight ? (
         <NightlightOutlinedIcon sx={{ fontSize: 15 }} />
       ) : (
