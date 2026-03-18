@@ -6,10 +6,12 @@ import Experiences from "../components/Experiences";
 import FeaturedWork from "../components/FeaturedWork";
 import Connect from "../components/Connect";
 import PageFooter from "../components/PageFooter";
+import NavBar from "../components/NavBar";
 
 function HomePage() {
   return (
     <div className="relative max-w-4xl mx-auto">
+      <NavBar />
       <div className="sticky top-0 z-0 h-screen">
         <div className="absolute inset-0">
           <MapboxMap />
@@ -18,6 +20,7 @@ function HomePage() {
           <Time />
         </div>
       </div>
+      {/* Pull content up to overlap the sticky map */}
       <div className="relative z-20 -mt-[100vh]">
         <Hero />
         <div className="pt-8 bg-surface-deep">
@@ -26,8 +29,6 @@ function HomePage() {
         <Experiences />
         <FeaturedWork />
         <Connect />
-      </div>
-      <div className="sm:pb-[15vh] pb-[20vh]">
         <PageFooter />
       </div>
     </div>

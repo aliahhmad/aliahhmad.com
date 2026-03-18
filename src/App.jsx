@@ -15,9 +15,6 @@ function App() {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
-      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[9999]">
-        <NavBar />
-      </div>
     </div>
   )
 }

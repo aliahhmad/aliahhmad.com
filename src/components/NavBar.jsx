@@ -1,46 +1,67 @@
 // src/components/Navbar.jsx
+import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import CodeOutlinedIcon from "@mui/icons-material/CodeOutlined";
 import NewspaperOutlinedIcon from "@mui/icons-material/NewspaperOutlined";
 import MessageOutlinedIcon from "@mui/icons-material/MessageOutlined";
 
+const items = [
+  {
+    id: "home",
+    label: "Home",
+    path: "/",
+    icon: <AccountCircleOutlinedIcon />,
+  },
+  { id: "work", label: "Work", path: "/work", icon: <CodeOutlinedIcon /> },
+  {
+    id: "blog",
+    label: "Blog",
+    path: "/blog",
+    icon: <NewspaperOutlinedIcon />,
+  },
+  {
+    id: "contact",
+    label: "Contact",
+    path: "/contact",
+    icon: <MessageOutlinedIcon />,
+  },
+];
+
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const items = [
-    {
-      id: "home",
-      label: "Home",
-      path: "/",
-      icon: <AccountCircleOutlinedIcon />,
-    },
-    { id: "work", 
-      label: "Work", 
-      path: "/work", 
-      icon: <CodeOutlinedIcon /> 
-    },
-    {
-      id: "blog",
-      label: "Blog",
-      path: "/blog",
-      icon: <NewspaperOutlinedIcon />,
-    },
-    {
-      id: "contact",
-      label: "Contact",
-      path: "/contact",
-      icon: <MessageOutlinedIcon />,
-    },
-  ];
+  const [visible, setVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        setVisible(false); // scrolling down
+      } else {
+        setVisible(true); // scrolling up
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   function handleClick(path) {
     navigate(path);
   }
 
   return (
-    <nav className="glass flex items-center gap-1 px-2 h-16 rounded-xl">
+    <nav
+      className={`fixed left-1/2 -translate-x-1/2 z-[9999] glass flex items-center gap-1 px-2 h-16 rounded-xl transition-all duration-300 ${
+        visible ? "bottom-8" : "-bottom-24"
+      }`}
+    >
       {items.map((item) => (
         <button
           key={item.id}
@@ -48,21 +69,14 @@ const Navbar = () => {
           className="flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-transform duration-200 hover:scale-[1.05]"
         >
           <span
-            style={{
-              opacity: location.pathname === item.path ? 1 : 0.5,
-              color: "white",
-            }}
+            className={
+              location.pathname === item.path ? "text-white" : "text-white/50"
+            }
           >
             {item.icon}
           </span>
           <span
-            style={{
-              fontSize: "12px",
-              color:
-                location.pathname === item.path
-                  ? "white"
-                  : "rgba(255,255,255,0.5)",
-            }}
+            className={`text-[12px] ${location.pathname === item.path ? "text-white" : "text-white/50"}`}
           >
             {item.label}
           </span>
