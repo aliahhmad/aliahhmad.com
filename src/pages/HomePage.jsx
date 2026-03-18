@@ -1,4 +1,4 @@
-import Map from "../components/Map";
+import MapboxMap from "../components/MapboxMap";
 import Time from "../components/Time";
 import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
@@ -11,7 +11,7 @@ function HomePage() {
     <div className="relative max-w-4xl mx-auto">
       <div className="sticky top-0 z-0 h-screen">
         <div className="absolute inset-0">
-          <Map />
+          <MapboxMap />
         </div>
         <div className="absolute top-6 left-10 z-10">
           <Time />

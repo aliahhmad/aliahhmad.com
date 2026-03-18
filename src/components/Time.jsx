@@ -2,7 +2,7 @@
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import NightlightOutlinedIcon from "@mui/icons-material/NightlightOutlined";
 
-function Time() {
+const Time = () => {
   const date = new Date();
 
   const hours = parseInt(

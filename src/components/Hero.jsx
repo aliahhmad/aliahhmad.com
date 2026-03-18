@@ -1,5 +1,5 @@
 // src/components/Hero.jsx
-function Hero() {
+const Hero = () => {
   return (
     <section
       className="h-[30vh] flex flex-col justify-end px-10"

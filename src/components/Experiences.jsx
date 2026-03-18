@@ -19,7 +19,7 @@ const EXPERIENCES = [
   },
 ];
 
-function Experiences() {
+const Experiences = () => {
   return (
     <section className="bg-surface-deep flex flex-col gap-6 py-2 px-10">
       <div className="text-white text-2xl">Experiences</div>

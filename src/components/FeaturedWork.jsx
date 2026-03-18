@@ -1,7 +1,7 @@
 // src/components/FeaturedWork.jsx
 import { useNavigate } from "react-router-dom";
 
-function FeaturedWork() {
+const FeaturedWork = () => {
   const navigate = useNavigate();
   const PROJECTS = [
     {

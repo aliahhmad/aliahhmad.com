@@ -1,7 +1,7 @@
 // src/components/Connect.jsx
 import { useNavigate } from "react-router-dom";
 
-function AboutMe() {
+const AboutMe = () => {
   const navigate = useNavigate();
   return (
     <section

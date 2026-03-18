@@ -16,7 +16,7 @@ const SOCIALS = [
   },
 ];
 
-function Connect() {
+const Connect = () => {
   return (
     <section className="bg-surface-deep flex flex-col gap-6 py-2 px-10">
       <div className="text-white flex flex-col gap-4">
