@@ -1,2 +1,1 @@
 - Add made with react and more at the end of home?
-- Fix mobile compatibility

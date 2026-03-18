@@ -26,13 +26,13 @@ const Experiences = () => {
       <div>
         {EXPERIENCES.map((exp) => (
           <React.Fragment key={exp.id}>
-            <div className="flex justify-between text-white text-lg items-center">
-              <div className="flex gap-3 items-center">
-                <img
-                  src={exp.picture}
-                  alt={exp.company}
-                  className="w-9 h-9 object-cover rounded-xl"
-                />
+            <div className="flex gap-3 items-center text-white">
+              <img
+                src={exp.picture}
+                alt={exp.company}
+                className="w-9 h-9 object-cover rounded-xl shrink-0"
+              />
+              <div className="flex flex-1 flex-col sm:flex-row sm:justify-between sm:items-center gap-1 text-lg">
                 <div>
                   <span className="opacity-70">
                     {exp.title}
@@ -40,8 +40,10 @@ const Experiences = () => {
                   </span>
                   {exp.company}
                 </div>
+                <div className="opacity-70">
+                  {exp.date}
+                </div>
               </div>
-              <div className="opacity-70">{exp.date}</div>
             </div>
             <hr className="border-t border-white opacity-20 w-full my-4" />
           </React.Fragment>
@@ -49,6 +51,6 @@ const Experiences = () => {
       </div>
     </section>
   );
-}
+};
 
 export default Experiences;

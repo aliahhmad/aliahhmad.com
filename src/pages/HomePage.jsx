@@ -17,7 +17,7 @@ function HomePage() {
           <Time />
         </div>
       </div>
-      <div className="relative z-20 -mt-[100vh] pb-[15vh]">
+      <div className="relative z-20 -mt-[100vh] sm:pb-[15vh] pb-[20vh]">
         <Hero />
         <div className="pt-8 bg-surface-deep">
           <AboutMe />

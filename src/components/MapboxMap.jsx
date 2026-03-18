@@ -26,7 +26,7 @@ const MapboxMap = () => {
         zoom: 2,
       }}
       onLoad={handleLoad}
-      style={{ width: "100%", height: "33%" }}
+      style={{ width: "100%", height: "45%" }}
       mapStyle="mapbox://styles/mapbox/navigation-night-v1"
       mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
       interactive={false}
