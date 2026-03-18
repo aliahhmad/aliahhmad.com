@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom'
 import './styles/App.css'
-import NavBar from './components/NavBar'
 import WorkPage from './pages/WorkPage'
 import HomePage from './pages/HomePage'
 import BlogPage from './pages/BlogPage'
 import ContactPage from './pages/ContactPage'
+import AliAhhmad from './pages/projects/AliAhhmad'
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Route path="/work" element={<WorkPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/work/portfolio" element={<AliAhhmad />} />
       </Routes>
     </div>
   )
