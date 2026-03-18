@@ -5,6 +5,7 @@ import AboutMe from "../components/AboutMe";
 import Experiences from "../components/Experiences";
 import FeaturedWork from "../components/FeaturedWork";
 import Connect from "../components/Connect";
+import PageFooter from "../components/PageFooter";
 
 function HomePage() {
   return (
@@ -17,7 +18,7 @@ function HomePage() {
           <Time />
         </div>
       </div>
-      <div className="relative z-20 -mt-[100vh] sm:pb-[15vh] pb-[20vh]">
+      <div className="relative z-20 -mt-[100vh]">
         <Hero />
         <div className="pt-8 bg-surface-deep">
           <AboutMe />
@@ -25,6 +26,9 @@ function HomePage() {
         <Experiences />
         <FeaturedWork />
         <Connect />
+      </div>
+      <div className="sm:pb-[15vh] pb-[20vh]">
+        <PageFooter />
       </div>
     </div>
   );
