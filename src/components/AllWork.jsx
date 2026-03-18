@@ -1,12 +1,9 @@
-// src/components/FeaturedWork.jsx
+// src/components/AllWork.jsx
 import { useNavigate } from "react-router-dom";
 import projects from "../data/allWork.json"
 
-const FeaturedWork = () => {
+const AllWork = () => {
   const navigate = useNavigate();
-
-  const featuredWordId = [1, 2]
-  const featuredProjects = projects.filter(item => featuredWordId.includes(item.id))
 
   function handleClick(path) {
     navigate(path);
@@ -14,9 +11,9 @@ const FeaturedWork = () => {
 
   return (
     <section className="bg-surface-deep flex flex-col gap-6 py-2 px-10">
-      <div className="text-white text-2xl">Featured Works</div>
-      <div className="flex overflow-x-auto overflow-y-visible gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-        {featuredProjects.map((project) => (
+      <div className="text-white text-2xl">All Works</div>
+      <div className="flex flex-wrap gap-4 py-2 px-1">
+        {projects.map((project) => (
           <div
             key={project.id}
             className="glass-flat flex-shrink-0 w-64 rounded-xl text-white cursor-pointer transition-transform duration-200 hover:scale-[1.01]"
@@ -34,13 +31,8 @@ const FeaturedWork = () => {
           </div>
         ))}
       </div>
-      <div className="flex items-end justify-end">
-        <a href="/work" className="text-lg text-white hover:underline">
-          See all works →
-        </a>
-      </div>
     </section>
   );
 }
 
-export default FeaturedWork;
+export default AllWork;

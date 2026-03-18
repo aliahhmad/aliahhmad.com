@@ -15,7 +15,7 @@ const EXPERIENCES = [
     company: "Wateen Telecom",
     date: "Jul 2022 - Aug 2022",
     picture:
-      "https://vectorseek.com/wp-content/uploads/2023/02/Wateen-Logo-Vector.jpg",
+      "/wateen_telecom_logo.jpg",
   },
 ];
 

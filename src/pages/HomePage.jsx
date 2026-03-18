@@ -1,3 +1,4 @@
+// src/pages/HomePage.jsx
 import MapboxMap from "../components/MapboxMap";
 import Time from "../components/Time";
 import Hero from "../components/Hero";
