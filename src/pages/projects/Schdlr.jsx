@@ -5,7 +5,7 @@ import usePageTitle from "../../hooks/usePageTitle";
 import PageFooter from "../../components/PageFooter";
 
 function WorkPage() {
-  usePageTitle("Personal Portfolio");
+  usePageTitle("Schdlr");
   return (
     <div className="relative max-w-4xl mx-auto pt-10">
       <NavBar />

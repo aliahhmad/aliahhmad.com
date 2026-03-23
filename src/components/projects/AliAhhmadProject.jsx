@@ -1,6 +1,6 @@
 // src/components/projects/AliAhhmadProject.jsx
 import { useState } from "react";
-import ScreenshotGallery from "../ScreenshotGallery";
+import ScreenshotGallery from "./ScreenshotGallery";
 
 const TABS = ["Overview", "Features", "Tech Stack", "Screenshots"];
 
