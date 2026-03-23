@@ -8,8 +8,10 @@ import FeaturedWork from "../components/FeaturedWork";
 import Connect from "../components/Connect";
 import PageFooter from "../components/PageFooter";
 import NavBar from "../components/NavBar";
+import usePageTitle from "../hooks/usePageTitle";
 
 function HomePage() {
+  usePageTitle("Home");
   return (
     <div className="relative max-w-4xl mx-auto">
       <NavBar />
