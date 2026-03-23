@@ -1,6 +1,6 @@
-// src/pages/projects/AliAhhmad.jsx
+// src/pages/projects/Schdlr.jsx
 import NavBar from "../../components/NavBar";
-import AliAhhmadProject from "../../components/projects/AliAhhmadProject";
+import SchdlrProject from "../../components/projects/SchdlrProject";
 import usePageTitle from "../../hooks/usePageTitle";
 import PageFooter from "../../components/PageFooter";
 
@@ -9,7 +9,7 @@ function WorkPage() {
   return (
     <div className="relative max-w-4xl mx-auto pt-10">
       <NavBar />
-      <AliAhhmadProject />
+      <SchdlrProject />
       <PageFooter />
     </div>
   );

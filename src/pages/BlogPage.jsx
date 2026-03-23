@@ -1,3 +1,4 @@
+// pages/BlogPage.jsx
 import usePageTitle from "../hooks/usePageTitle";
 
 function BlogPage() {

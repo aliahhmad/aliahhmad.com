@@ -3,8 +3,8 @@ import './styles/App.css'
 import WorkPage from './pages/WorkPage'
 import HomePage from './pages/HomePage'
 import BlogPage from './pages/BlogPage'
-import ContactPage from './pages/ContactPage'
 import AliAhhmad from './pages/projects/AliAhhmad'
+import Schdlr from './pages/projects/Schdlr'
 import { Toaster } from 'react-hot-toast'
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/work" element={<WorkPage />} />
         <Route path="/blog" element={<BlogPage />} />
-        <Route path="/contact" element={<ContactPage />} />
         <Route path="/work/portfolio" element={<AliAhhmad />} />
+        <Route path="/work/schdlr" element={<Schdlr />} />
       </Routes>
       <Toaster position="top-center" />
     </div>

@@ -33,7 +33,7 @@ const Connect = () => {
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="glass flex items-center gap-2 px-4 py-3 rounded-full text-white text-base cursor-pointer transition-transform duration-200 hover:scale-[1.03]"
+            className="glass-flat flex items-center gap-2 px-4 py-3 rounded-full text-white text-base cursor-pointer transition-transform duration-200 hover:scale-[1.03]"
           >
             {social.icon}
             <span>{social.handle}</span>

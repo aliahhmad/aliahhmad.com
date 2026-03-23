@@ -64,22 +64,16 @@ const Navbar = () => {
         {items.map((item) => (
           <button
             key={item.id}
-            onClick={
-              item.id === "contact"
-                ? () => setContactFromOpen(true)
-                : () => navigate(item.path)
-            }
-            className="flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-transform duration-200 hover:scale-[1.05]"
+            onClick={() => navigate(item.path)}
+            className="group flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-transform duration-200 hover:scale-[1.05]"
           >
             <span
-              className={
-                location.pathname === item.path ? "text-white" : "text-white/50"
-              }
+              className={`${location.pathname === item.path ? "text-white" : "text-white/50 group-hover:text-white/80"}`}
             >
               {item.icon}
             </span>
             <span
-              className={`text-[12px] ${location.pathname === item.path ? "text-white" : "text-white/50"}`}
+              className={`text-xs ${location.pathname === item.path ? "text-white" : "text-white/50 group-hover:text-white/80"}`}
             >
               {item.label}
             </span>

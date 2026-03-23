@@ -48,15 +48,15 @@ const BackButtonNavBar = () => {
         <button
           key={item.id}
           onClick={() => handleClick()}
-          className="flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-transform duration-200 hover:scale-[1.05]"
+          className="group flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-transform duration-200 hover:scale-[1.05]"
         >
           <span
-            className="text-white/50"
+            className="text-white/50 group-hover:text-white/80"
           >
             {item.icon}
           </span>
           <span
-            className="text-[12px] text-white/50"
+            className="text-xs text-white/50 group-hover:text-white/80"
           >
             {item.label}
           </span>
