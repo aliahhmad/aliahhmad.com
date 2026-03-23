@@ -25,3 +25,6 @@ dist-ssr
 
 # env
 .env
+
+# to do list
+to_do_notes.txt
