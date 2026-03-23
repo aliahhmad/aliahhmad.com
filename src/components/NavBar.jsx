@@ -64,7 +64,7 @@ const Navbar = () => {
         {items.map((item) => (
           <button
             key={item.id}
-            onClick={() => navigate(item.path)}
+            onClick={item.id === "contact" ? () => setContactFromOpen(true) : () => navigate(item.path)}
             className="group flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-transform duration-200 hover:scale-[1.05]"
           >
             <span

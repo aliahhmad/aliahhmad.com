@@ -1,5 +1,6 @@
 // src/components/projects/AliAhhmadProject.jsx
 import { useState } from "react";
+import ScreenshotGallery from "../ScreenshotGallery";
 
 const TABS = ["Overview", "Features", "Tech Stack", "Screenshots"];
 
@@ -38,12 +39,25 @@ const techStack = [
 ];
 
 const screenshots = [
-  { label: "📸 Work / Projects Page", caption: "Project Grid" },
-  { label: "📸 Project Detail View", caption: "Expanded Project" },
-  { label: "📸 Blog Page", caption: "Post Listing" },
-  { label: "📸 Contact Page", caption: "Contact Form" },
-  { label: "📸 Mapbox Integration", caption: "Real-time Map" },
-  { label: "📸 Glass UI Detail", caption: "iOS 26 Design" },
+  {
+    label: "📸 Work / Projects Page",
+    caption: "Project Grid",
+    path: "/projects/aliahhmad/work_page.png",
+  },
+  {
+    label: "📸 Project Detail View",
+    caption: "Expanded Project",
+    path: "/projects/aliahhmad/project_detail.png",
+  },
+  {
+    label: "📸 Contact Page",
+    caption: "Contact Form",
+    path: "/projects/aliahhmad/contact_page.png",
+  },
+  {
+    label: "📸 Blog Page",
+    caption: "Post Listing",
+  },
 ];
 
 const PortfolioProject = () => {
@@ -249,24 +263,7 @@ const PortfolioProject = () => {
 
         {/* SCREENSHOTS */}
         {activeTab === "Screenshots" && (
-          <div className="flex overflow-x-auto overflow-y-visible gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-            {screenshots.map((s) => (
-              <div
-                key={s.label}
-                className="glass-flat flex-shrink-0 w-64 rounded-xl text-white overflow-hidden hover:scale-[1.01] transition-transform duration-200"
-              >
-                {/* Placeholder — swap with <img src="..." className="w-full h-40 object-cover rounded-t-xl" /> */}
-                <div className="h-40 flex items-center justify-center bg-gradient-to-br from-white/5 to-white/10">
-                  <span className="text-white/30 text-xs italic text-center px-4">
-                    {s.label}
-                  </span>
-                </div>
-                <div className="flex flex-col gap-1 p-4 border-t border-white/10">
-                  <p className="text-sm font-medium opacity-70">{s.caption}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ScreenshotGallery screenshots={screenshots} />
         )}
       </div>
 
