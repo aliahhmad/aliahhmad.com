@@ -1,4 +1,4 @@
-// src/components/Map.jsx
+// src/components/home/MapboxMap.jsx
 import { useRef } from "react";
 import Map, { Marker } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";

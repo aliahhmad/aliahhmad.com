@@ -1,4 +1,4 @@
-// src/components/Time.jsx
+// src/components/home/Time.jsx
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import NightlightOutlinedIcon from "@mui/icons-material/NightlightOutlined";
 

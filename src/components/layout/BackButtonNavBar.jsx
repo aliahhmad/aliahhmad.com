@@ -1,4 +1,4 @@
-// src/components/Navbar.jsx
+// src//components/layout/BackButtonNavBar.jsx
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';

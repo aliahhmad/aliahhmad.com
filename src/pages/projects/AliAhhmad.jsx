@@ -1,8 +1,8 @@
 // src/pages/projects/AliAhhmad.jsx
-import NavBar from "../../components/NavBar";
-import AliAhhmadProject from "../../components/projects/AliAhhmadProject";
+import NavBar from "../../components/layout/NavBar";
+import AliAhhmadProject from "../../components/project-details/AliAhhmadProject";
+import PageFooter from "../../components/layout/PageFooter";
 import usePageTitle from "../../hooks/usePageTitle";
-import PageFooter from "../../components/PageFooter";
 
 function AliAhhmad() {
   usePageTitle("Personal Portfolio");

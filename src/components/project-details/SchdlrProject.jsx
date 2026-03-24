@@ -1,109 +1,99 @@
-// src/components/projects/AliAhhmadProject.jsx
+// src/components/project-details/SchdlrProject.jsx
 import { useState } from "react";
-import ScreenshotGallery from "./ScreenshotGallery";
 
 const TABS = ["Overview", "Features", "Tech Stack", "Screenshots"];
 
 const features = [
   {
-    icon: "🏠",
-    title: "Home Page",
-    desc: "Dynamic landing page with real-time Mapbox integration, experience highlights, and featured projects.",
+    title: "Business Onboarding",
+    desc: "Owners set up their profile, services, pricing, staff, and invoicing rules — everything needed to start accepting bookings.",
   },
   {
-    icon: "💼",
-    title: "Work / Projects",
-    desc: "Browse all projects in a grid. Click any project to expand and see full details.",
+    title: "Smart Booking",
+    desc: "Clients and guests can book appointments with real-time conflict checks. Guest bookings use secure token links — no account needed.",
   },
   {
-    icon: "✉️",
-    title: "Contact",
-    desc: "Email sending powered by Mailtrap using a custom domain — no third-party form services.",
+    title: "Invoicing & Billing",
+    desc: "Auto-generated invoices on booking or completion. Full lifecycle tracking: Draft → Sent → Paid → Overdue → Void.",
   },
   {
-    icon: "📝",
-    title: "Blog",
-    desc: "Full-stack blog with an Express API and PostgreSQL backend. Readers can browse and read posts.",
+    title: "Stripe Payments",
+    desc: "Clients pay invoices via Stripe Checkout. Webhooks update payment status in real time. Admin-handled refunds.",
   },
   {
-    icon: "🪟",
-    title: "iOS 26 Design",
-    desc: "Glassmorphism UI inspired by Apple's iOS 26. Built with Tailwind CSS and custom CSS for liquid-glass effects.",
+    title: "Reminders & Receipts",
+    desc: "System sends automated email reminders before appointments and receipts after payment — all without manual effort.",
+  },
+  {
+    title: "Feedback Loop",
+    desc: "After each appointment, clients receive a feedback link with ratings, quick tags, and comments. Trends surface in the dashboard.",
   },
 ];
 
 const techStack = [
-  { category: "Frontend", items: ["React", "Tailwind CSS", "Mapbox GL"] },
-  { category: "Backend", items: ["Express.js", "PostgreSQL", "Mailtrap"] },
+  { category: "Frontend", items: ["React", "Bootstrap CSS"] },
+  { category: "Backend", items: ["Express.js", "PostgreSQL", "Stripe"] },
   { category: "Deployment", items: ["Vercel"] },
 ];
 
 const screenshots = [
-  {
-    label: "📸 Work / Projects Page",
-    caption: "Project Grid",
-    path: "/projects/aliahhmad/work_page.png",
-  },
-  {
-    label: "📸 Project Detail View",
-    caption: "Expanded Project",
-    path: "/projects/aliahhmad/project_detail.png",
-  },
-  {
-    label: "📸 Contact Page",
-    caption: "Contact Form",
-    path: "/projects/aliahhmad/contact_page.png",
-  },
-  {
-    label: "📸 Blog Page",
-    caption: "Post Listing",
-  },
+  { label: "📸 Booking Flow", caption: "Appointment Booking" },
+  { label: "📸 Business Dashboard", caption: "Admin Overview" },
+  { label: "📸 Invoice View", caption: "Invoice Detail" },
+  { label: "📸 Client Portal", caption: "Booking History" },
+  { label: "📸 Stripe Checkout", caption: "Payment Flow" },
+  { label: "📸 Feedback Form", caption: "Post-Appointment Review" },
 ];
 
-const PortfolioProject = () => {
+const SchdlrProject = () => {
   const [activeTab, setActiveTab] = useState("Overview");
 
   return (
     <section className="bg-surface-deep flex flex-col gap-8 px-10 min-h-screen">
       {/* ── Hero ── */}
       <div className="flex flex-col gap-4">
-        <span className="self-start text-sm font-semibold uppercase text-white/40 glass-flat px-3 py-1 rounded-full">
-          Featured Project
-        </span>
+        <div className="flex items-center gap-2">
+          <span className="self-start text-sm font-semibold uppercase text-white/40 glass-flat px-3 py-1 rounded-full">
+            In Development
+          </span>
+          <span className="self-start text-sm font-semibold uppercase text-amber-400/70 glass-flat px-3 py-1 rounded-full">
+            Coming Soon
+          </span>
+        </div>
 
-        <h1 className="text-white text-4xl font-bold">
-          Personal Portfolio (aliahhmad.com)
-        </h1>
+        <h1 className="text-white text-4xl font-bold">Schdlr</h1>
 
         <p className="text-white/60 text-lg max-w-xl">
-          A full-stack portfolio site with a blog, contact system, and an iOS
-          26-inspired glassmorphism UI — the very site you're on.
+          A multi-tenant appointment scheduling platform with smart invoicing,
+          Stripe payments, and role-based access — built for real businesses.
         </p>
 
         {/* Pills */}
         <div className="flex flex-wrap gap-2">
-          {["React", "Express", "PostgreSQL", "Tailwind CSS", "Vercel"].map(
-            (t) => (
-              <span
-                key={t}
-                className="glass-flat text-white/80 text-sm px-3 py-1 rounded-full"
-              >
-                {t}
-              </span>
-            ),
-          )}
+          {[
+            "React",
+            "Express",
+            "PostgreSQL",
+            "Bootstrap",
+            "Stripe",
+            "Vercel",
+          ].map((t) => (
+            <span
+              key={t}
+              className="glass-flat text-white/80 text-sm px-3 py-1 rounded-full"
+            >
+              {t}
+            </span>
+          ))}
         </div>
 
-        {/* CTA links */}
+        {/* CTA links — disabled while in development */}
         <div className="flex gap-3">
+          <span className="glass-flat text-white/30 text-base font-semibold px-5 py-2 rounded-full cursor-not-allowed select-none">
+            Live Site — Coming Soon
+          </span>
           <a
-            href="https://aliahhmad.com/"
-            className="glass-flat text-white text-base font-semibold px-5 py-2 rounded-full hover:scale-[1.02] transition-transform duration-200"
-          >
-            Live Site ↗
-          </a>
-          <a
-            href="https://github.com/aliahhmad/aliahhmad.com"
+            href="https://github.com/aliahhmad"
             className="text-white/60 border border-white/20 text-base font-semibold px-5 py-2 rounded-full hover:text-white hover:border-white/40 transition-all duration-200"
           >
             GitHub ↗
@@ -111,7 +101,7 @@ const PortfolioProject = () => {
         </div>
       </div>
 
-      {/* ── Hero screenshot ── */}
+      {/* ── Hero screenshot placeholder ── */}
       <div className="glass rounded-2xl overflow-hidden">
         {/* Fake browser bar */}
         <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/5">
@@ -119,15 +109,21 @@ const PortfolioProject = () => {
           <span className="w-3 h-3 rounded-full bg-yellow-400/80" />
           <span className="w-3 h-3 rounded-full bg-green-400/80" />
           <span className="ml-3 text-white/30 text-xs glass-flat px-3 py-0.5 rounded-md">
-            aliahhmad.com
+            schdlr.aliahhmad.com/dashboard
           </span>
         </div>
-        {/* Main screenshot */}
-        <img
-          src="/projects/aliahhmad/home_page.png"
-          alt="Project Screenshot"
-          className="w-full object-cover"
-        />
+        {/* Placeholder — swap with <img src="..." className="w-full object-cover" /> */}
+        <div
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)",
+          }}
+          className="w-full h-64 flex flex-col items-center justify-center gap-3"
+        >
+          <span className="text-white/20 text-sm italic">
+            Screenshot coming soon
+          </span>
+        </div>
       </div>
 
       {/* ── Tabs ── */}
@@ -136,7 +132,7 @@ const PortfolioProject = () => {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`flex-1 min-w-max px-4 py-2 rounded-lg text-base  transition-transform duration-200
+            className={`flex-1 min-w-max px-4 py-2 rounded-lg text-base transition-transform duration-200
               ${
                 activeTab === tab
                   ? "text-white shadow-sm"
@@ -154,26 +150,29 @@ const PortfolioProject = () => {
         {activeTab === "Overview" && (
           <div className="flex flex-col gap-6">
             <p className="text-white/70 text-base leading-relaxed">
-              This is my personal portfolio — built from scratch to serve as a
-              living resume, blog platform, and creative canvas. The design
-              draws heavy inspiration from{" "}
-              <span className="text-white font-medium">Apple's iOS 26</span>,
-              specifically its liquid-glass panels and soft translucency,
-              achieved with Tailwind CSS and custom CSS backdrop filters.
+              Schdlr is a full-stack, multi-tenant scheduling platform designed
+              for service businesses — think consultants, clinics, tutors, and
+              repair services. It handles the entire client lifecycle: booking,
+              invoicing, payment collection, reminders, and post-appointment
+              feedback.
             </p>
             <p className="text-white/70 text-base leading-relaxed">
-              The frontend is a React SPA deployed on Vercel. The backend is a
-              lightweight Express server handling blog posts (PostgreSQL) and
-              emails (Mailtrap + custom domain).
+              The platform supports four actor types —{" "}
+              <span className="text-white font-medium">Business Owners</span>,{" "}
+              <span className="text-white font-medium">Staff</span>,{" "}
+              <span className="text-white font-medium">Clients</span>, and{" "}
+              <span className="text-white font-medium">Guests</span> — with
+              role-based access and a full audit trail. Guests can book and pay
+              without ever creating an account, via secure token links.
             </p>
 
-            {/* Stat cards — same scrollable row pattern as FeaturedWork */}
+            {/* Stat cards */}
             <div className="flex overflow-x-auto gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
               {[
-                { num: "4", label: "Pages" },
-                { num: "2", label: "APIs" },
-                { num: "1", label: "Database" },
-                { num: "∞", label: "CSS tweaks" },
+                { num: "4", label: "Actor Types" },
+                { num: "6", label: "Core Modules" },
+                { num: "1", label: "Stripe Integration" },
+                { num: "∞", label: "Bookings" },
               ].map(({ num, label }) => (
                 <div
                   key={label}
@@ -239,10 +238,11 @@ const PortfolioProject = () => {
               <span className="text-white text-lg font-bold">Architecture</span>
               <div className="flex items-center gap-2 flex-wrap">
                 {[
-                  { title: "Client", sub: "React + Tailwind + Mapbox" },
+                  { title: "Client", sub: "React + Bootstrap" },
                   { title: "Vercel Edge", sub: "CDN + Routing" },
-                  { title: "Express API", sub: "Blog + Email" },
-                  { title: "PostgreSQL", sub: "Blog Posts" },
+                  { title: "Express API", sub: "Bookings + Invoices" },
+                  { title: "Stripe", sub: "Payments + Webhooks" },
+                  { title: "PostgreSQL", sub: "All Data" },
                 ].map((node, i, arr) => (
                   <div key={node.title} className="flex items-center gap-2">
                     <div className="glass-flat rounded-xl px-4 py-3 text-white flex flex-col items-center gap-0.5">
@@ -261,9 +261,17 @@ const PortfolioProject = () => {
           </div>
         )}
 
-        {/* SCREENSHOTS */}
+        {/* SCREENSHOTS — Coming Soon */}
         {activeTab === "Screenshots" && (
-          <ScreenshotGallery screenshots={screenshots} />
+          <div className="flex flex-col items-center justify-center gap-4 py-16 glass-flat rounded-2xl">
+            <p className="text-white/40 text-lg font-bold">
+              Screenshots coming soon
+            </p>
+            <p className="text-white/25 text-base max-w-xs text-center">
+              This project is currently in development. Check back once the UI
+              is live.
+            </p>
+          </div>
         )}
       </div>
 
@@ -277,4 +285,4 @@ const PortfolioProject = () => {
   );
 };
 
-export default PortfolioProject;
+export default SchdlrProject;

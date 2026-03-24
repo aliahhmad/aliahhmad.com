@@ -1,8 +1,8 @@
 // src/pages/projects/Schdlr.jsx
-import NavBar from "../../components/NavBar";
-import SchdlrProject from "../../components/projects/SchdlrProject";
+import NavBar from "../../components/layout/NavBar";
+import SchdlrProject from "../../components/project-details/SchdlrProject";
+import PageFooter from "../../components/layout/PageFooter";
 import usePageTitle from "../../hooks/usePageTitle";
-import PageFooter from "../../components/PageFooter";
 
 function Schdlr() {
   usePageTitle("Schdlr");

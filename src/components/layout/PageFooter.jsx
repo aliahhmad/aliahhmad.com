@@ -1,3 +1,4 @@
+// src/components/layout/PageFooter.jsx
 const PageFooter = () => {
     return (
         <footer className="w-full text-center sm:py-6 py-10 mb-10 text-base text-white opacity-50">

@@ -1,4 +1,4 @@
-// components/ContactForm.jsx
+// components/ui/ContactForm.jsx
 import { useState } from "react";
 import toast from "react-hot-toast";
 
@@ -51,7 +51,7 @@ function ContactForm({ isOpen, onClose }) {
         </button>
         <div className="flex gap-4 items-center">
           <img
-            src="/profile_picture.jpg"
+            src="/home/profile_picture.jpg"
             alt="Ali Ahmad"
             className="w-14 h-14 rounded-full object-cover flex-shrink-0"
           />

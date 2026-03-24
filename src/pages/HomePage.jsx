@@ -1,13 +1,13 @@
 // src/pages/HomePage.jsx
-import MapboxMap from "../components/MapboxMap";
-import Time from "../components/Time";
-import Hero from "../components/Hero";
-import AboutMe from "../components/AboutMe";
-import Experiences from "../components/Experiences";
-import FeaturedWork from "../components/FeaturedWork";
-import Connect from "../components/Connect";
-import PageFooter from "../components/PageFooter";
-import NavBar from "../components/NavBar";
+import MapboxMap from "../components/home/MapboxMap";
+import Time from "../components/home/Time";
+import Hero from "../components/home/Hero";
+import AboutMe from "../components/home/AboutMe";
+import Experiences from "../components/work/Experiences";
+import FeaturedWork from "../components/work/FeaturedWork";
+import Connect from "../components/home/Connect";
+import PageFooter from "../components/layout/PageFooter";
+import NavBar from "../components/layout/NavBar";
 import usePageTitle from "../hooks/usePageTitle";
 
 function HomePage() {

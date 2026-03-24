@@ -1,4 +1,4 @@
-// src/components/Experiences.jsx
+// src/components/home/Experiences.jsx
 import React from "react";
 
 const EXPERIENCES = [
@@ -7,7 +7,7 @@ const EXPERIENCES = [
     title: "Developer Intern",
     company: "Conrad Labs",
     date: "Jun 2023 - Jul 2023",
-    picture: "/conrad_labs_logo.png",
+    picture: "/work/conrad_labs_logo.png",
   },
   {
     id: "wateen",
@@ -15,7 +15,7 @@ const EXPERIENCES = [
     company: "Wateen Telecom",
     date: "Jul 2022 - Aug 2022",
     picture:
-      "/wateen_telecom_logo.jpg",
+      "/work/wateen_telecom_logo.jpg",
   },
 ];
 

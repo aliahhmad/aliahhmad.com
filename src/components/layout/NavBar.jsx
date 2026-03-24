@@ -1,11 +1,11 @@
-// src/components/Navbar.jsx
+// src/components/layout/NavBar.jsx
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import CodeOutlinedIcon from "@mui/icons-material/CodeOutlined";
 import NewspaperOutlinedIcon from "@mui/icons-material/NewspaperOutlined";
 import MessageOutlinedIcon from "@mui/icons-material/MessageOutlined";
-import ContactForm from "./ContactForm";
+import ContactForm from "../ui/ContactForm";
 
 const items = [
   {

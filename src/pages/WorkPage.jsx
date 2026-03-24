@@ -1,8 +1,8 @@
 // src/pages/WorkPage.jsx
-import NavBar from "../components/NavBar";
-import Experiences from "../components/Experiences";
-import PageFooter from "../components/PageFooter";
-import AllWork from "../components/AllWork";
+import NavBar from "../components/layout/NavBar";
+import Experiences from "../components/work/Experiences";
+import PageFooter from "../components/layout/PageFooter";
+import AllWork from "../components/work/AllWork";
 import usePageTitle from "../hooks/usePageTitle";
 
 function WorkPage() {

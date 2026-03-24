@@ -1,4 +1,4 @@
-// src/components/Connect.jsx
+// src/components/home/Connect.jsx
 import { Github, Linkedin } from "lucide-react";
 
 const SOCIALS = [

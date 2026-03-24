@@ -1,4 +1,4 @@
-// src/components/Hero.jsx
+// src/components/home/Hero.jsx
 const Hero = () => {
   return (
     <section
@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
         <div className="w-30 h-36 sm:w-48 sm:h-56 rounded-3xl overflow-hidden rotate-[2deg] wiggle cursor-pointer flex-shrink-0">
           <img
-            src="/profile_picture.jpg"
+            src="/home/profile_picture.jpg"
             alt="Ali"
             className="w-full h-full object-cover"
           />

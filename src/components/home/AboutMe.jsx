@@ -1,4 +1,4 @@
-// src/components/Connect.jsx
+// src/components/home/AboutMe.jsx
 import { useNavigate } from "react-router-dom";
 
 const AboutMe = () => {

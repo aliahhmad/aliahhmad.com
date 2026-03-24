@@ -1,4 +1,4 @@
-// src/components/ScreenshotGallery.jsx
+// src/components/ui/ScreenshotGallery.jsx
 import { useState } from "react";
 
 const ScreenshotGallery = ({ screenshots }) => {

@@ -1,6 +1,6 @@
-// src/components/projects/AppBreweryProject.jsx
+// src/components/project-details/AppBreweryProject.jsx
 import { useState } from "react";
-import ScreenshotGallery from "./ScreenshotGallery";
+import ScreenshotGallery from "./../ui/ScreenshotGallery";
 
 const TABS = [
   "Overview",

@@ -1,8 +1,8 @@
 // src/pages/projects/AppBrewery.jsx
-import NavBar from "../../components/NavBar";
-import AppBreweryProject from "../../components/projects/AppBreweryProject";
+import NavBar from "../../components/layout/NavBar";
+import AppBreweryProject from "../../components/project-details/AppBreweryProject";
+import PageFooter from "../../components/layout/PageFooter";
 import usePageTitle from "../../hooks/usePageTitle";
-import PageFooter from "../../components/PageFooter";
 
 function AppBrewery() {
   usePageTitle("App Brewery Projects");
