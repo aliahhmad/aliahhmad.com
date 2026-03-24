@@ -93,9 +93,14 @@ const AppBreweryProject = () => {
     <section className="bg-surface-deep flex flex-col gap-8 px-10 min-h-screen">
       {/* ── Hero ── */}
       <div className="flex flex-col gap-4">
-        <span className="self-start text-sm font-semibold uppercase text-white/40 glass-flat px-3 py-1 rounded-full">
-          Learning Project
-        </span>
+        <div className="flex items-center gap-2">
+          <span className="self-start text-sm font-semibold uppercase text-white/40 glass-flat px-3 py-1 rounded-full">
+            Featured Project
+          </span>
+          <span className="self-start text-sm font-semibold uppercase text-green-400/70 glass-flat px-3 py-1 rounded-full">
+            Learning Project
+          </span>
+        </div>
 
         <h1 className="text-white text-4xl font-bold">
           App Brewery Course Projects
