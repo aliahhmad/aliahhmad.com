@@ -4,7 +4,7 @@ import AliAhhmadProject from "../../components/projects/AliAhhmadProject";
 import usePageTitle from "../../hooks/usePageTitle";
 import PageFooter from "../../components/PageFooter";
 
-function WorkPage() {
+function AliAhhmad() {
   usePageTitle("Personal Portfolio");
   return (
     <div className="relative max-w-4xl mx-auto pt-10">
@@ -15,4 +15,4 @@ function WorkPage() {
   );
 }
 
-export default WorkPage;
+export default AliAhhmad;

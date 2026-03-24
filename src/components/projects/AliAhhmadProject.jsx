@@ -122,7 +122,7 @@ const PortfolioProject = () => {
             aliahhmad.com
           </span>
         </div>
-        {/* Placeholder — swap with <img src="..." className="w-full object-cover" /> */}
+        {/* Main screenshot */}
         <img
           src="/projects/aliahhmad/home_page.png"
           alt="Project Screenshot"

@@ -5,7 +5,7 @@ import projects from "../data/allWork.json";
 const FeaturedWork = () => {
   const navigate = useNavigate();
 
-  const featuredWordId = [1, 2];
+  const featuredWordId = [1, 2, 3];
   const featuredProjects = projects.filter((item) =>
     featuredWordId.includes(item.id),
   );
