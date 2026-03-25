@@ -6,7 +6,7 @@ import AllWorksPage from './pages/AllWorksPage'
 import BlogPage from './pages/BlogPage'
 import AllBlogsPage from './pages/AllBlogsPage'
 import { Toaster } from 'react-hot-toast'
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
