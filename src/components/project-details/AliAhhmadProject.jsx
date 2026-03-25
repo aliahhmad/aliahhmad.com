@@ -168,7 +168,7 @@ const PortfolioProject = () => {
             <div className="flex overflow-x-auto gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
               {[
                 { num: "4", label: "Pages" },
-                { num: "2", label: "APIs" },
+                { num: "1", label: "APIs" },
                 { num: "1", label: "Database" },
                 { num: "∞", label: "CSS tweaks" },
               ].map(({ num, label }) => (
