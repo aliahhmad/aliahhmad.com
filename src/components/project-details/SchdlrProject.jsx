@@ -1,5 +1,6 @@
 // src/components/project-details/SchdlrProject.jsx
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const TABS = ["Overview", "Features", "Tech Stack", "Screenshots"];
 
@@ -277,9 +278,9 @@ const SchdlrProject = () => {
 
       {/* ── Footer link ── */}
       <div className="flex items-end justify-end">
-        <a href="/work" className="text-lg text-white hover:underline">
+        <Link to="/work" className="text-lg text-white hover:underline">
           See all works →
-        </a>
+        </Link>
       </div>
     </section>
   );

@@ -57,24 +57,14 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed z-[9998] glass flex items-center gap-1 px-2 h-16 rounded-xl transition-all duration-300 ${
+        className={`fixed left-1/2 -translate-x-1/2 z-[9998] glass flex items-center gap-1 px-2 h-16 rounded-xl transition-all duration-300 ${
           visible ? "bottom-8" : "-bottom-24"
         }`}
-        style={{
-          left: "50%",
-          transform: "translateX(-50%) translateZ(0)",
-          isolation: "isolate",
-          willChange: "transform",
-        }}
       >
         {items.map((item) => (
           <button
             key={item.id}
-            onClick={
-              item.id === "contact"
-                ? () => setContactFromOpen(true)
-                : () => navigate(item.path)
-            }
+            onClick={item.id === "contact" ? () => setContactFromOpen(true) : () => navigate(item.path)}
             className="group flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-transform duration-200 hover:scale-[1.05]"
           >
             <span

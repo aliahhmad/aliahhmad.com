@@ -1,5 +1,6 @@
 // src/components/project-details/AliAhhmadProject.jsx
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import ScreenshotGallery from "../ui/ScreenshotGallery";
 
 const TABS = ["Overview", "Features", "Tech Stack", "Screenshots"];
@@ -269,9 +270,9 @@ const PortfolioProject = () => {
 
       {/* ── Footer link ── */}
       <div className="flex items-end justify-end">
-        <a href="/work" className="text-lg text-white hover:underline">
+        <Link to="/work" className="text-lg text-white hover:underline">
           See all works →
-        </a>
+        </Link>
       </div>
     </section>
   );

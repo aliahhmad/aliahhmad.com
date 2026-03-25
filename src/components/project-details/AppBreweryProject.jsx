@@ -1,5 +1,6 @@
 // src/components/project-details/AppBreweryProject.jsx
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import ScreenshotGallery from "./../ui/ScreenshotGallery";
 
 const TABS = [
@@ -345,9 +346,9 @@ const AppBreweryProject = () => {
 
       {/* ── Footer link ── */}
       <div className="flex items-end justify-end">
-        <a href="/work" className="text-lg text-white hover:underline">
+        <Link to="/work" className="text-lg text-white hover:underline">
           See all works →
-        </a>
+        </Link>
       </div>
     </section>
   );

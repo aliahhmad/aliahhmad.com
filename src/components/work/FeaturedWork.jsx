@@ -1,5 +1,5 @@
 // src/components/work/FeaturedWork.jsx
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import projects from "../../data/allWorks.json";
 
 const FeaturedWork = () => {
@@ -48,9 +48,9 @@ const FeaturedWork = () => {
         ))}
       </div>
       <div className="flex items-end justify-end">
-        <a href="/work" className="text-lg text-white hover:underline">
+        <Link to="/work" className="text-lg text-white hover:underline">
           See all works →
-        </a>
+        </Link>
       </div>
     </section>
   );
