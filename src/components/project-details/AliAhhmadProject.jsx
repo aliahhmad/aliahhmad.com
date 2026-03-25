@@ -20,7 +20,7 @@ const features = [
   },
   {
     title: "Blog",
-    desc: "A personal blog built with React.",
+    desc: "Browse all posts in a grid. Click any post to expand and see the full article.",
   },
   {
     title: "iOS 26 Design",
