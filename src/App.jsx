@@ -6,6 +6,7 @@ import AllWorksPage from './pages/AllWorksPage'
 import BlogPage from './pages/BlogPage'
 import AllBlogsPage from './pages/AllBlogsPage'
 import { Toaster } from 'react-hot-toast'
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/blog/:id" element={<BlogPage />} />
       </Routes>
       <Toaster position="top-center" />
+      <Analytics />
     </div>
   )
 }

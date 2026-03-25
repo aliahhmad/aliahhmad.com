@@ -79,7 +79,7 @@ const PortfolioProject = () => {
 
         {/* Pills */}
         <div className="flex flex-wrap gap-2">
-          {["React", "Express", "PostgreSQL", "Tailwind CSS", "Vercel"].map(
+          {["React", "Serverless Functions", "Tailwind CSS", "Vercel"].map(
             (t) => (
               <span
                 key={t}
@@ -167,9 +167,8 @@ const PortfolioProject = () => {
             {/* Stat cards — same scrollable row pattern as FeaturedWork */}
             <div className="flex overflow-x-auto gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
               {[
-                { num: "4", label: "Pages" },
+                { num: "5", label: "Pages" },
                 { num: "1", label: "APIs" },
-                { num: "1", label: "Database" },
                 { num: "∞", label: "CSS tweaks" },
               ].map(({ num, label }) => (
                 <div
