@@ -46,13 +46,9 @@ html {
 @layer components {
   .glass,
   .glass-flat {
-    backdrop-filter: blur(40px) saturate(180%);
-    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    @apply backdrop-blur-[40px] backdrop-saturate-[180%];
     border: 0.5px solid rgba(255, 255, 255, 0.25);
     border-top: 0.5px solid rgba(255, 255, 255, 0.4);
-    isolation: isolate;
-    transform: translateZ(0);
-    will-change: backdrop-filter;
   }
 
   .glass {
