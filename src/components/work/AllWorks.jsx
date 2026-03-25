@@ -12,7 +12,7 @@ const AllWorks = () => {
   return (
     <section className="bg-surface-deep flex flex-col gap-6 py-2 px-10">
       <div className="text-white text-2xl">All Works</div>
-      <div className="flex flex-wrap gap-4 py-2 px-1">
+      <div className="flex overflow-x-auto overflow-y-visible gap-4 py-2 px-1 sm:flex-wrap sm:overflow-x-visible [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {projects.map((project) => (
           <div
             key={project.id}

@@ -1,4 +1,4 @@
-// components/ui/ContactForm.jsx
+// src/components/ui/ContactForm.jsx
 import { useState } from "react";
 import toast from "react-hot-toast";
 
@@ -26,7 +26,7 @@ function ContactForm({ isOpen, onClose }) {
       toast.success("Message sent!");
     } catch (err) {
       console.error(err);
-      setStatus("error");
+      toast.error("Failed to send message.");
     } finally {
       setIsSending(false);
     }
@@ -40,7 +40,7 @@ function ContactForm({ isOpen, onClose }) {
       onClick={onClose}
     >
       <section
-        className="glass flex flex-col gap-6 p-8 w-full max-w-xl rounded-2xl z-[9999] relative"
+        className="glass flex flex-col gap-6 p-8 m-4 w-full max-w-xl rounded-2xl z-[9999] relative"
         onClick={(e) => e.stopPropagation()}
       >
         <button
