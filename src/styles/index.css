@@ -44,22 +44,26 @@ html {
 }
 
 @layer components {
-  .glass {
-    background: rgba(255, 255, 255, 0.12);
+  .glass,
+  .glass-flat {
     backdrop-filter: blur(40px) saturate(180%);
     -webkit-backdrop-filter: blur(40px) saturate(180%);
     border: 0.5px solid rgba(255, 255, 255, 0.25);
     border-top: 0.5px solid rgba(255, 255, 255, 0.4);
+    isolation: isolate;
+    transform: translateZ(0);
+    will-change: backdrop-filter;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.12);
     box-shadow:
       0 8px 32px rgba(0, 0, 0, 0.4),
       inset 0 1px 0 rgba(255, 255, 255, 0.15);
   }
+
   .glass-flat {
     background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(40px) saturate(180%);
-    -webkit-backdrop-filter: blur(40px) saturate(180%);
-    border: 0.5px solid rgba(255, 255, 255, 0.25);
-    border-top: 0.5px solid rgba(255, 255, 255, 0.4);
   }
 }
 

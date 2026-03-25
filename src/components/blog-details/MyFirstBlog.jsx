@@ -1,4 +1,5 @@
 // src/components/blog-details/MyFirstBlog.jsx
+import { Link } from "react-router-dom";
 
 const passions = [
   {
@@ -141,9 +142,9 @@ const MyFirstBlog = () => {
 
       {/* ── Footer ── */}
       <div className="flex items-end justify-end mt-auto">
-        <a href="/blog" className="text-lg text-white hover:underline">
+        <Link to="/blog" className="text-lg text-white hover:underline">
           See all blogs →
-        </a>
+        </Link>
       </div>
     </section>
   );
