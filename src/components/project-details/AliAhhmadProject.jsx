@@ -7,35 +7,30 @@ const TABS = ["Overview", "Features", "Tech Stack", "Screenshots"];
 
 const features = [
   {
-    icon: "🏠",
     title: "Home Page",
-    desc: "Dynamic landing page with real-time Mapbox integration, experience highlights, and featured projects.",
+    desc: "Landing page with a real-time Mapbox integration, experience highlights, and featured projects.",
   },
   {
-    icon: "💼",
     title: "Work / Projects",
     desc: "Browse all projects in a grid. Click any project to expand and see full details.",
   },
   {
-    icon: "✉️",
     title: "Contact",
-    desc: "Email sending powered by Mailtrap using a custom domain — no third-party form services.",
+    desc: "Email delivery powered by Mailtrap with a custom domain — no third-party form services.",
   },
   {
-    icon: "📝",
     title: "Blog",
-    desc: "Full-stack blog with an Express API and PostgreSQL backend. Readers can browse and read posts.",
+    desc: "A personal blog built with React.",
   },
   {
-    icon: "🪟",
     title: "iOS 26 Design",
-    desc: "Glassmorphism UI inspired by Apple's iOS 26. Built with Tailwind CSS and custom CSS for liquid-glass effects.",
+    desc: "Glassmorphism UI inspired by Apple's iOS 26, built with Tailwind CSS and custom liquid-glass effects.",
   },
 ];
 
 const techStack = [
   { category: "Frontend", items: ["React", "Tailwind CSS", "Mapbox GL"] },
-  { category: "Backend", items: ["Express.js", "PostgreSQL", "Mailtrap"] },
+  { category: "Backend", items: ["Vercel Serverless", "Mailtrap"] },
   { category: "Deployment", items: ["Vercel"] },
 ];
 
@@ -58,6 +53,7 @@ const screenshots = [
   {
     label: "📸 Blog Page",
     caption: "Post Listing",
+    path: "/projects/aliahhmad/blog_page.png",
   },
 ];
 
@@ -163,9 +159,9 @@ const PortfolioProject = () => {
               achieved with Tailwind CSS and custom CSS backdrop filters.
             </p>
             <p className="text-white/70 text-base leading-relaxed">
-              The frontend is a React SPA deployed on Vercel. The backend is a
-              lightweight Express server handling blog posts (PostgreSQL) and
-              emails (Mailtrap + custom domain).
+              The frontend is a React SPA deployed on Vercel, with a serverless
+              API route handling email delivery via Mailtrap and a custom
+              domain.
             </p>
 
             {/* Stat cards — same scrollable row pattern as FeaturedWork */}
@@ -241,9 +237,8 @@ const PortfolioProject = () => {
               <div className="flex items-center gap-2 flex-wrap">
                 {[
                   { title: "Client", sub: "React + Tailwind + Mapbox" },
-                  { title: "Vercel Edge", sub: "CDN + Routing" },
-                  { title: "Express API", sub: "Blog + Email" },
-                  { title: "PostgreSQL", sub: "Blog Posts" },
+                  { title: "Vercel CDN", sub: "Hosting + Routing" },
+                  { title: "Serverless Function", sub: "Email via Mailtrap" },
                 ].map((node, i, arr) => (
                   <div key={node.title} className="flex items-center gap-2">
                     <div className="glass-flat rounded-xl px-4 py-3 text-white flex flex-col items-center gap-0.5">
