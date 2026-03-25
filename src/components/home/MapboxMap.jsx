@@ -3,7 +3,8 @@ import { useRef } from "react";
 import Map, { Marker } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 
-const LOCATION = { longitude: -77.6757882, latitude: 43.0838534 };
+const MARKER = { longitude: -77.6757882, latitude: 43.0838534 };
+const LOCATION = { longitude: -77.676067, latitude: 43.0821873 }; // A bit below to load map correctly
 
 const MapboxMap = () => {
   const mapRef = useRef();
@@ -31,7 +32,7 @@ const MapboxMap = () => {
       mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
       interactive={false}
     >
-      <Marker longitude={LOCATION.longitude} latitude={LOCATION.latitude}>
+      <Marker longitude={MARKER.longitude} latitude={MARKER.latitude}>
         <div
           className="w-3 h-3 rounded-full bg-blue-500 border-2 border-white"
           style={{ boxShadow: "0 0 0 4px rgba(59,130,246,0.3)" }}
