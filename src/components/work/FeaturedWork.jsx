@@ -33,7 +33,7 @@ const FeaturedWork = () => {
             ) : (
               <div
                 style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)" }}
-                className="w-full h-40 flex flex-col items-center justify-center gap-3"
+                className="w-full h-40 rounded-t-xl flex flex-col items-center justify-center gap-3"
               >
                 <span className="text-white/20 text-sm italic">
                   Screenshot coming soon
