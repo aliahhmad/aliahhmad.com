@@ -45,7 +45,7 @@ html {
 
 @layer components {
   .glass {
-    background: rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(40px) saturate(180%);
     -webkit-backdrop-filter: blur(40px) saturate(180%);
     border: 0.5px solid rgba(255, 255, 255, 0.25);
@@ -55,7 +55,7 @@ html {
       inset 0 1px 0 rgba(255, 255, 255, 0.15);
   }
   .glass-flat {
-    background: rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(40px) saturate(180%);
     -webkit-backdrop-filter: blur(40px) saturate(180%);
     border: 0.5px solid rgba(255, 255, 255, 0.25);
