@@ -95,10 +95,10 @@ const AppBreweryProject = () => {
       {/* ── Hero ── */}
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-2">
-          <span className="self-start text-sm font-semibold uppercase text-white/40 glass-flat px-3 py-1 rounded-full">
+          <span className="justify-center items-center self-start text-sm font-semibold uppercase text-white/40 glass-flat px-3 py-1 rounded-full">
             Featured Project
           </span>
-          <span className="self-start text-sm font-semibold uppercase text-green-400/70 glass-flat px-3 py-1 rounded-full">
+          <span className="justify-center items-center self-start text-sm font-semibold uppercase text-green-400/70 glass-flat px-3 py-1 rounded-full">
             Learning Project
           </span>
         </div>
@@ -119,7 +119,7 @@ const AppBreweryProject = () => {
             (t) => (
               <span
                 key={t}
-                className="glass-flat text-white/80 text-sm px-3 py-1 rounded-full"
+                className="justify-center items-center glass-flat text-white/80 text-sm px-3 py-1 rounded-full"
               >
                 {t}
               </span>
@@ -131,13 +131,13 @@ const AppBreweryProject = () => {
         <div className="flex gap-3">
           <a
             href="https://github.com/aliahhmad/appbrewery_projects"
-            className="glass-flat text-white text-base font-semibold px-5 py-2 rounded-full hover:scale-[1.02] transition-transform duration-200"
+            className="justify-center items-center glass-flat text-white text-base font-semibold px-5 py-2 rounded-full hover:scale-[1.02] transition-transform duration-200"
           >
             GitHub ↗
           </a>
           <a
             href="https://www.udemy.com/course/the-complete-web-development-bootcamp/"
-            className="text-white/60 border border-white/20 text-base font-semibold px-5 py-2 rounded-full hover:text-white hover:border-white/40 transition-all duration-200"
+            className="justify-center items-center text-white/60 border border-white/20 text-base font-semibold px-5 py-2 rounded-full hover:text-white hover:border-white/40 transition-all duration-200"
           >
             Course ↗
           </a>

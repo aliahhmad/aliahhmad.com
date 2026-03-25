@@ -64,7 +64,7 @@ const PortfolioProject = () => {
     <section className="bg-surface-deep flex flex-col gap-8 px-10 min-h-screen">
       {/* ── Hero ── */}
       <div className="flex flex-col gap-4">
-        <span className="self-start text-sm font-semibold uppercase text-white/40 glass-flat px-3 py-1 rounded-full">
+        <span className="justify-center items-center self-start text-sm font-semibold uppercase text-white/40 glass-flat px-3 py-1 rounded-full">
           Featured Project
         </span>
 
@@ -83,7 +83,7 @@ const PortfolioProject = () => {
             (t) => (
               <span
                 key={t}
-                className="glass-flat text-white/80 text-sm px-3 py-1 rounded-full"
+                className="justify-center items-center glass-flat text-white/80 text-sm px-3 py-1 rounded-full"
               >
                 {t}
               </span>
@@ -95,13 +95,13 @@ const PortfolioProject = () => {
         <div className="flex gap-3">
           <a
             href="https://aliahhmad.com/"
-            className="glass-flat text-white text-base font-semibold px-5 py-2 rounded-full hover:scale-[1.02] transition-transform duration-200"
+            className="justify-center items-center glass-flat text-white text-base font-semibold px-5 py-2 rounded-full hover:scale-[1.02] transition-transform duration-200"
           >
             Live Site ↗
           </a>
           <a
             href="https://github.com/aliahhmad/aliahhmad.com"
-            className="text-white/60 border border-white/20 text-base font-semibold px-5 py-2 rounded-full hover:text-white hover:border-white/40 transition-all duration-200"
+            className="justify-center items-center text-white/60 border border-white/20 text-base font-semibold px-5 py-2 rounded-full hover:text-white hover:border-white/40 transition-all duration-200"
           >
             GitHub ↗
           </a>
