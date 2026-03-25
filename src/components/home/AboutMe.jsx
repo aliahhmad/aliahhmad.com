@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 
 const AboutMe = () => {
   const navigate = useNavigate();
+  const [isContactFromOpen, setContactFromOpen] = useState(false);
+
   return (
-    <section
-      className="bg-surface-deep flex flex-col py-2 px-10"
-    >
+    <section className="bg-surface-deep flex flex-col py-2 px-10">
       <div className="flex flex-col gap-4 text-white">
         <div className="text-2xl">About Me</div>
         <div className="flex flex-col gap-2 text-lg opacity-70 ">
@@ -32,8 +32,8 @@ const AboutMe = () => {
         <div className="text-white text-lg">
           <p>
             <a
-              onClick={() => navigate("/contact")}
-              className=" underline decoration-dotted"
+              onClick={() => setContactFromOpen(true)}
+              className="underline decoration-dotted"
             >
               Contact Me
             </a>{" "}
@@ -47,11 +47,14 @@ const AboutMe = () => {
             <span className="opacity-70">{" :)"}</span>
           </p>
         </div>
-
         <hr className="border-t border-white opacity-20 w-full my-4" />
+        <ContactForm
+          isOpen={isContactFromOpen}
+          onClose={() => setContactFromOpen(false)}
+        />
       </div>
     </section>
   );
-}
+};
 
 export default AboutMe;
