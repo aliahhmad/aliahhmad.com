@@ -1,8 +1,9 @@
 // src/components/home/AboutMe.jsx
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import ContactForm from "../ui/ContactForm";
 
 const AboutMe = () => {
-  const navigate = useNavigate();
   const [isContactFromOpen, setContactFromOpen] = useState(false);
 
   return (

@@ -1,5 +1,6 @@
 // src/components/ui/ContactForm.jsx
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import toast from "react-hot-toast";
 
 function ContactForm({ isOpen, onClose }) {
@@ -34,9 +35,9 @@ function ContactForm({ isOpen, onClose }) {
 
   if (!isOpen) return null;
 
-  return (
+  return createPortal(
     <div
-      className="fixed inset-0 z-[9998] bg-black/60 backdrop-blur-2xl flex items-center justify-center animate-in fade-in duration-200"
+      className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-2xl flex items-center justify-center animate-in fade-in duration-200"
       onClick={onClose}
     >
       <section
@@ -100,7 +101,8 @@ function ContactForm({ isOpen, onClose }) {
           </div>
         </form>
       </section>
-    </div>
+    </div>,
+    document.body
   );
 }
 
