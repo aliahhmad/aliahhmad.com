@@ -13,7 +13,7 @@ const Hero = () => {
           <div className="text-xl opacity-70">Hello there,</div>
           <div className="text-5xl font-bold">I'm Ali.</div>
         </div>
-        <div className="w-30 h-36 sm:w-48 sm:h-56 rounded-3xl overflow-hidden rotate-[2deg] wiggle cursor-pointer flex-shrink-0">
+        <div className="w-28 h-36 sm:w-48 sm:h-56 rounded-3xl overflow-hidden rotate-[2deg] wiggle cursor-pointer flex-shrink-0">
           <img
             src="/home/profile_picture.jpg"
             alt="Ali"

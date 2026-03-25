@@ -116,9 +116,9 @@ const PortfolioProject = () => {
       <div className="glass rounded-2xl overflow-hidden">
         {/* Fake browser bar */}
         <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/5">
-          <span className="w-3 h-3 rounded-full bg-red-400/80" />
-          <span className="w-3 h-3 rounded-full bg-yellow-400/80" />
-          <span className="w-3 h-3 rounded-full bg-green-400/80" />
+          <span className="w-3 h-3 aspect-square rounded-full bg-red-400/80 flex-shrink-0" />
+          <span className="w-3 h-3 aspect-square rounded-full bg-yellow-400/80 flex-shrink-0" />
+          <span className="w-3 h-3 aspect-square rounded-full bg-green-400/80 flex-shrink-0" />
           <span className="ml-3 text-white/30 text-xs glass-flat px-3 py-0.5 rounded-md">
             aliahhmad.com
           </span>
