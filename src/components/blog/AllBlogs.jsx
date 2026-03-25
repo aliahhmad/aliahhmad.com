@@ -16,7 +16,7 @@ function AllBlogs() {
         <div
           key={blog.id}
           className="glass-flat flex-shrink-0 rounded-xl text-white cursor-pointer transition-transform duration-200 hover:scale-[1.01]"
-          onClick={() => handleClick("/blog/" + String(blog.id))}
+          onClick={() => handleClick(`/blog/${blog.id}`)}
         >
           <div className="flex flex-col gap-2 p-4">
             <h3 className="text-lg font-bold">{blog.title}</h3>

@@ -17,7 +17,7 @@ const AllWorks = () => {
           <div
             key={project.id}
             className="glass-flat flex-shrink-0 w-64 rounded-xl text-white cursor-pointer transition-transform duration-200 hover:scale-[1.01]"
-            onClick={() => handleClick("/work/" + project.id)}
+            onClick={() => handleClick(`/work/${project.id}`)}
           >
             {project.image ? (
               <img
