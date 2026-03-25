@@ -1,17 +1,30 @@
 // src/pages/WorkPage.jsx
+import { useParams } from 'react-router-dom';
 import NavBar from "../components/layout/NavBar";
-import Experiences from "../components/work/Experiences";
 import PageFooter from "../components/layout/PageFooter";
-import AllWork from "../components/work/AllWork";
+import SchdlrProject from "../components/project-details/SchdlrProject"
+import AliAhhmadProject from "../components/project-details/AliAhhmadProject"
+import AppBreweryProject from "../components/project-details/AppBreweryProject"
 import usePageTitle from "../hooks/usePageTitle";
+import works from "../data/allWorks.json";
+
+const workPages = {
+  1: <SchdlrProject />,
+  2: <AliAhhmadProject />,
+  3: <AppBreweryProject />
+};
 
 function WorkPage() {
-  usePageTitle("Work");
+  const { id } = useParams();
+  const page = workPages[id];
+
+  const workDetails = works.find((work) => work.id === Number(id));
+  usePageTitle(workDetails.title);
+
   return (
     <div className="relative max-w-4xl mx-auto pt-10">
       <NavBar />
-      <Experiences />
-      <AllWork />
+      {page}
       <PageFooter />
     </div>
   );

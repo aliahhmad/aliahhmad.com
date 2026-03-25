@@ -1,11 +1,10 @@
 import { Routes, Route } from 'react-router-dom'
 import './styles/App.css'
-import WorkPage from './pages/WorkPage'
 import HomePage from './pages/HomePage'
+import WorkPage from './pages/WorkPage'
+import AllWorksPage from './pages/AllWorksPage'
 import BlogPage from './pages/BlogPage'
-import AliAhhmad from './pages/projects/AliAhhmad'
-import AppBrewery from './pages/projects/AppBrewery'
-import Schdlr from './pages/projects/Schdlr'
+import AllBlogsPage from './pages/AllBlogsPage'
 import { Toaster } from 'react-hot-toast'
 
 function App() {
@@ -13,11 +12,10 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/work" element={<WorkPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/work/portfolio" element={<AliAhhmad />} />
-        <Route path="/work/schdlr" element={<Schdlr />} />
-        <Route path="/work/app-brewery" element={<AppBrewery />} />
+        <Route path="/work" element={<AllWorksPage />} />
+        <Route path="/work/:id" element={<WorkPage/>} />
+        <Route path="/blog" element={<AllBlogsPage />} />
+        <Route path="/blog/:id" element={<BlogPage />} />
       </Routes>
       <Toaster position="top-center" />
     </div>

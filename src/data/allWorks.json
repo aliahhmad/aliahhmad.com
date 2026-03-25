@@ -2,14 +2,12 @@
   {
     "id": 1,
     "title": "Schdlr (Appointment Scheduling App)",
-    "path": "/work/schdlr",
     "date": "March 2026 - Present",
     "description": "A full-stack scheduling platform supporting businesses, staff, and clients. Features service management, conflict-checked bookings, auto-generated invoices, Stripe payments, and post-appointment feedback."
   },
   {
     "id": 2,
     "title": "aliahhmad.com (Personal Portfolio)",
-    "path": "/work/portfolio",
     "date": "March 2026 - Present",
     "description": "A personal portfolio website showcasing projects, experience, and skills — designed and built from scratch with react and express to reflect a clean, modern developer identity.",
     "image": "/projects/aliahhmad/home_page.png"
@@ -17,7 +15,6 @@
   {
     "id": 3,
     "title": "App Brewery Course Projects",
-    "path": "/work/app-brewery",
     "date": "2024 - 2025",
     "description": "A collection of full-stack capstone projects built through Angela Yu's Complete Web Development Bootcamp — covering HTML/CSS, JavaScript, Node.js, Express, PostgreSQL, and React.",
     "image": "/projects/appbrewery/course_page.png"

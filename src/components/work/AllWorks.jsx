@@ -1,8 +1,8 @@
 // src/components/work/AllWork.jsx
 import { useNavigate } from "react-router-dom";
-import projects from "../../data/allWork.json"
+import projects from "../../data/allWorks.json"
 
-const AllWork = () => {
+const AllWorks = () => {
   const navigate = useNavigate();
 
   function handleClick(path) {
@@ -17,7 +17,7 @@ const AllWork = () => {
           <div
             key={project.id}
             className="glass-flat flex-shrink-0 w-64 rounded-xl text-white cursor-pointer transition-transform duration-200 hover:scale-[1.01]"
-            onClick={() => handleClick(project.path)}
+            onClick={() => handleClick("/work/" + project.id)}
           >
             {project.image ? (
               <img
@@ -46,4 +46,4 @@ const AllWork = () => {
   );
 }
 
-export default AllWork;
+export default AllWorks;
