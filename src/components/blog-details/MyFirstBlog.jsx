@@ -26,10 +26,10 @@ const MyFirstBlog = () => {
       {/* ── Hero ── */}
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-2">
-          <span className="justify-center items-center self-start text-sm font-semibold uppercase text-white/40 glass-flat px-3 py-1 rounded-full">
+          <span className="self-start text-sm font-semibold uppercase text-white/40 glass-flat px-3 py-1 rounded-full">
             Blog
           </span>
-          <span className="justify-center items-centerself-start text-sm font-semibold uppercase text-blue-400/70 glass-flat px-3 py-1 rounded-full">
+          <span className="self-start text-sm font-semibold uppercase text-blue-400/70 glass-flat px-3 py-1 rounded-full">
             First Post
           </span>
         </div>
@@ -43,10 +43,10 @@ const MyFirstBlog = () => {
         </p>
 
         <div className="flex items-center gap-3">
-          <span className="justify-center items-center glass-flat text-white/50 text-sm px-3 py-1 rounded-full">
+          <span className="glass-flat text-white/50 text-sm px-3 py-1 rounded-full">
             24th March 2026
           </span>
-          <span className="justify-center items-center glass-flat text-white/50 text-sm px-3 py-1 rounded-full">
+          <span className="glass-flat text-white/50 text-sm px-3 py-1 rounded-full">
             3 min read
           </span>
         </div>
