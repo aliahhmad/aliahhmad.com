@@ -1,6 +1,7 @@
 // src/components/project-details/AliAhhmadProject.jsx
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Pills from "../ui/Pills";
 import ScreenshotGallery from "../ui/ScreenshotGallery";
 
 const TABS = ["Overview", "Features", "Tech Stack", "Screenshots"];
@@ -78,18 +79,7 @@ const PortfolioProject = () => {
         </p>
 
         {/* Pills */}
-        <div className="flex flex-wrap gap-2">
-          {["React", "Serverless Functions", "Tailwind CSS", "Vercel"].map(
-            (t) => (
-              <span
-                key={t}
-                className="glass-flat text-white/80 text-sm px-3 py-1 rounded-full"
-              >
-                {t}
-              </span>
-            ),
-          )}
-        </div>
+        <Pills items={["React", "Serverless Functions", "Tailwind CSS", "Vercel"]} />
 
         {/* CTA links */}
         <div className="flex gap-3">

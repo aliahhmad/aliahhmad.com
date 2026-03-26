@@ -1,6 +1,7 @@
 // src/components/project-details/AppBreweryProject.jsx
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Pills from "../ui/Pills";
 import ScreenshotGallery from "./../ui/ScreenshotGallery";
 
 const TABS = [
@@ -114,18 +115,7 @@ const AppBreweryProject = () => {
         </p>
 
         {/* Pills */}
-        <div className="flex flex-wrap gap-2">
-          {["React", "Node.js", "Express", "PostgreSQL", "Bootstrap"].map(
-            (t) => (
-              <span
-                key={t}
-                className="glass-flat text-white/80 text-sm px-3 py-1 rounded-full"
-              >
-                {t}
-              </span>
-            ),
-          )}
-        </div>
+        <Pills items={["React", "Node.js", "Express", "PostgreSQL", "Bootstrap"]} />
 
         {/* CTA links */}
         <div className="flex gap-3">

@@ -1,6 +1,7 @@
 // src/components/project-details/SchdlrProject.jsx
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Pills from "../ui/Pills";
 
 const TABS = ["Overview", "Features", "Tech Stack", "Screenshots"];
 
@@ -70,23 +71,7 @@ const SchdlrProject = () => {
         </p>
 
         {/* Pills */}
-        <div className="flex flex-wrap gap-2">
-          {[
-            "React",
-            "Express",
-            "PostgreSQL",
-            "Bootstrap",
-            "Stripe",
-            "Vercel",
-          ].map((t) => (
-            <span
-              key={t}
-              className="glass-flat text-white/80 text-sm px-3 py-1 rounded-full"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
+        <Pills items={["React", "Express", "PostgreSQL", "Bootstrap", "Stripe", "Vercel"]} />
 
         {/* CTA links — disabled while in development */}
         <div className="flex gap-3">

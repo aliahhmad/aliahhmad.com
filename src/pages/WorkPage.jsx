@@ -2,9 +2,9 @@
 import { useParams } from 'react-router-dom';
 import NavBar from "../components/layout/NavBar";
 import PageFooter from "../components/layout/PageFooter";
-import SchdlrProject from "../components/project-details/SchdlrProject"
-import AliAhhmadProject from "../components/project-details/AliAhhmadProject"
-import AppBreweryProject from "../components/project-details/AppBreweryProject"
+import SchdlrProject from "../components/work-details/SchdlrProject"
+import AliAhhmadProject from "../components/work-details/AliAhhmadProject"
+import AppBreweryProject from "../components/work-details/AppBreweryProject"
 import usePageTitle from "../hooks/usePageTitle";
 import works from "../data/allWorks.json";
 
