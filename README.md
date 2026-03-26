@@ -1,29 +1,44 @@
 # aliahhmad.com
 
-Personal portfolio website for Ali Ahmad, built as a React frontend with a Vercel serverless contact function. The site acts as a living resume, project showcase, blog, and contact experience, with a visual style inspired by iOS-style glassmorphism.
+Personal portfolio website for Ali Ahmad, built with React, Vite, Tailwind CSS, and a Vercel serverless contact API. The site acts as a living resume, project showcase, blog, and contact experience, with a glassmorphism-inspired visual language and a Mapbox-backed landing page.
 
-## What This Project Does
+## Overview
 
-- Introduces Ali through a map-backed landing page and short bio
-- Showcases featured work and detailed project pages
-- Includes a blog section for long-form writing
-- Lets visitors send messages through a custom contact form
-- Uses a Vercel serverless function to handle contact submissions with Mailtrap
+This project is a single-page React application with client-side routing for:
 
-## Highlights
+- a map-backed home page
+- a curated work section with detailed project pages
+- a blog index and blog detail views
+- a modal contact form that posts to a custom serverless endpoint
 
-- React single-page application powered by Vite
-- Animated landing page with a non-interactive Mapbox background
-- Glassmorphism-inspired UI built with Tailwind CSS and custom styling
-- Project detail pages with tabbed content and screenshot galleries
-- Blog listing and blog detail routes
-- Contact form with toast feedback and Mailtrap-powered email delivery
+The frontend is deployed alongside `api/contact.js`, which forwards contact submissions through Mailtrap.
+
+## Features
+
+- Sticky Mapbox background on the home page with Rochester time display
+- Floating bottom navigation shared across the site
+- Work listing plus dedicated project detail pages for:
+  - Schdlr
+  - aliahhmad.com
+  - App Brewery course projects
+- Reusable project-detail UI patterns including:
+  - status pills
+  - CTA link groups
+  - browser-style screenshot frames
+  - stat cards
+  - feature cards
+  - tech stack cards
+  - architecture flows
+  - screenshot galleries with a lightbox
+- Blog index and long-form blog detail page support
+- Modal contact form with toast feedback
+- Vercel Analytics and Speed Insights integration
 
 ## Tech Stack
 
 ### Frontend
 
-- React
+- React 19
 - React Router
 - Vite
 - Tailwind CSS
@@ -34,46 +49,79 @@ Personal portfolio website for Ali Ahmad, built as a React frontend with a Verce
 
 ### Backend
 
-- Node.js
 - Vercel Serverless Functions
 - Mailtrap
+
+### Tooling
+
+- ESLint
+- PostCSS
+- Autoprefixer
 
 ## Project Structure
 
 ```text
 .
 ├── api/
-│   └── contact.js        # Vercel serverless function for contact form email delivery
+│   └── contact.js
+├── public/
+│   ├── home/
+│   ├── projects/
+│   └── work/
 ├── src/
 │   ├── components/
-│   │   ├── home/         # Hero, map, about, and connect sections
-│   │   ├── layout/       # Navbar and footer
-│   │   ├── project-details/
 │   │   ├── blog/
 │   │   ├── blog-details/
-│   │   └── ui/
-│   ├── data/             # Project and blog metadata
+│   │   ├── home/
+│   │   ├── layout/
+│   │   ├── ui/
+│   │   ├── work/
+│   │   └── work-details/
+│   ├── data/
 │   ├── hooks/
-│   ├── pages/            # Route-level pages
-│   └── styles/
+│   ├── pages/
+│   ├── styles/
+│   ├── App.jsx
+│   └── main.jsx
 ├── package.json
+├── tailwind.config.js
 ├── vite.config.js
 └── README.md
 ```
 
-## Routes
+## Routing
 
-### Frontend
+### Frontend Routes
 
 - `/` - home page
-- `/work` - all projects
-- `/work/:id` - individual project detail pages
+- `/work` - all work/projects
+- `/work/:id` - project detail page
 - `/blog` - all blog posts
-- `/blog/:id` - individual blog posts
+- `/blog/:id` - blog detail page
 
-### Backend
+### API Route
 
-- `POST /api/contact` - sends a contact message through Mailtrap
+- `POST /api/contact` - send a contact message
+
+## Key Directories
+
+- `src/pages/`
+  Route-level page composition for home, work, and blog routes.
+
+- `src/components/work-details/`
+  Detail pages for each featured project, built from reusable UI building blocks.
+
+- `src/components/ui/`
+  Shared presentational pieces such as pills, browser frames, galleries, stat cards, and architecture flows.
+
+- `src/data/`
+  JSON metadata for blog and work listings.
+
+- `src/hooks/usePageTitle.js`
+  Small hook for updating the browser tab title per route.
+
+- `src/styles/index.css`
+  Global Tailwind layers, glass utility styles, animation definitions, and shared design tokens.
 
 ## Environment Variables
 
@@ -84,12 +132,15 @@ VITE_MAPBOX_TOKEN=your_mapbox_token
 MAILTRAP_TOKEN=your_mailtrap_token
 ```
 
-### Notes
+### Variable Notes
 
-- `VITE_MAPBOX_TOKEN` is used by the frontend map component
-- `MAILTRAP_TOKEN` is used by the serverless contact function
+- `VITE_MAPBOX_TOKEN`
+  Required by the homepage map component.
 
-## Running Locally
+- `MAILTRAP_TOKEN`
+  Required by the Vercel contact API for sending emails.
+
+## Local Development
 
 Install dependencies:
 
@@ -97,36 +148,65 @@ Install dependencies:
 npm install
 ```
 
-Start the React frontend:
+Start the Vite development server:
 
 ```bash
 npm run dev
 ```
 
-For production, Vercel serves the frontend and exposes the contact handler at `/api/contact`.
+Build for production:
+
+```bash
+npm run build
+```
+
+Run linting:
+
+```bash
+npm run lint
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
 
 ## Contact Flow
 
-The contact form lives in the frontend UI and posts to `/api/contact`. That request is handled by a Vercel serverless function in [`api/contact.js`](/Users/aliahmad/Desktop/Code/aliahhmad.com/api/contact.js), which validates the request and uses Mailtrap to send the message to Ali's inbox. This keeps form handling under your control instead of relying on a third-party form platform.
+The contact modal in the frontend submits a `POST` request to `/api/contact`.
 
-## Design Direction
+That request is handled by [`api/contact.js`](/Users/aliahmad/Desktop/Code/aliahhmad.com/api/contact.js), which:
 
-This project leans into a polished portfolio presentation rather than a generic starter template:
+- handles the browser preflight request
+- validates the incoming message
+- sends the message through Mailtrap
+- returns a success or failure response to the UI
 
-- translucent panels and layered surfaces
-- map-driven hero section
-- compact mobile-friendly navigation
-- project storytelling through screenshots and tabbed sections
+This keeps form handling inside the project instead of relying on a third-party form service.
 
-## Deployment Notes
+## Design Notes
 
-This repository is currently structured for Vercel as:
+This project intentionally avoids a generic portfolio template feel. The current design direction includes:
 
-- a Vite-built React frontend
-- a colocated serverless API function under `api/`
+- deep dark surfaces with translucent glass panels
+- a map-driven landing page rather than a static hero background
+- compact floating navigation for long-scroll pages
+- story-driven project detail pages with screenshots, features, and architecture summaries
 
-That means the frontend and contact endpoint can be deployed together in a single Vercel project.
+## Deployment
+
+This repository is structured for Vercel deployment as:
+
+- a Vite-built frontend
+- a colocated serverless function under `api/`
+
+That allows the frontend and contact endpoint to be deployed together in one project.
+
+## Known Note
+
+At the time of writing, ESLint may flag `process` inside `api/contact.js` unless the API file is configured for a Node/Vercel environment in the ESLint setup.
 
 ---
 
-> **Note:** AI assistance was used in generating code comments and documentation throughout this project.
+AI assistance was used for parts of the code comments and documentation in this project.
