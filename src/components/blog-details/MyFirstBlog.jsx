@@ -3,20 +3,24 @@ import { Link } from "react-router-dom";
 
 const passions = [
   {
-    label: "Web Development",
-    desc: "Building modern, clean web experiences with React and Node.js.",
+    label: "Crafting Solutions",
+    desc: "From UI/UX web design and full-stack development to custom software, I love building intuitive things that solve real problems.",
   },
   {
-    label: "Design",
-    desc: "I love the intersection of design and code — making things look and feel great.",
+    label: "Achieving Efficiency",
+    desc: "I'm obsessed with optimizing processes—finding the smartest ways to cut costs, speed things up, and do more with less.",
   },
   {
     label: "Gaming",
-    desc: "A big part of how I unwind and find inspiration for interactive experiences.",
+    desc: "My go-to way to unwind, and secretly where I find a lot of my inspiration for highly interactive digital experiences.",
   },
   {
-    label: "Learning",
-    desc: "Always picking up something new — whether it's a framework, tool, or concept.",
+    label: "Cooking",
+    desc: "My screen-free creative outlet. I love experimenting with new ingredients and testing out ideas in the kitchen.",
+  },
+  {
+    label: "Always Learning",
+    desc: "Currently diving deep into AWS cloud computing, but I'm constantly picking up new frameworks, tools, or concepts.",
   },
 ];
 
@@ -71,29 +75,45 @@ const MyFirstBlog = () => {
       <div className="flex flex-col gap-4">
         <h2 className="text-white text-2xl font-bold">A bit about me</h2>
         <p className="text-white/70 text-base leading-relaxed">
-          I'm a <span className="text-white font-medium">web developer</span>{" "}
-          with a love for building clean, modern digital experiences. I'm based
-          in{" "}
-          <span className="text-white font-medium">[Rochester, New York]</span>{" "}
-          and I've been on this coding journey for a while now — and I honestly
-          couldn't imagine doing anything else.
+          I'm a{" "}
+          <span className="text-white font-medium">
+            computer scientist and web developer
+          </span>{" "}
+          with a massive love for building beautiful, responsive websites and
+          AI-driven solutions. I'm currently based in{" "}
+          <span className="text-white font-medium">Rochester, New York</span>{" "}
+          pursuing my Master's at RIT, and I honestly couldn't imagine a more
+          exciting journey.
         </p>
         <p className="text-white/70 text-base leading-relaxed">
-          I grew up [a little about your background — city, culture,
-          upbringing]. That environment shaped the way I think, the things I
-          value, and ultimately the kind of work I want to put out into the
-          world.
+          Believe it or not, my story didn't start with a compiler. My first
+          real love was the arts, and sketching was my absolute strongest suit.
+          I even got accepted into several art schools! But I ultimately
+          realized I wanted to channel that creative energy into modern
+          technology, turning my artistic foundation into an edge for designing
+          intuitive, business-growing software.
+        </p>
+        <p className="text-white/70 text-base leading-relaxed">
+          Over the years, my path has been a wild ride through ML, AI, and Deep
+          Learning tasks, including internships at Conrad Labs and Wateen
+          Telecom, and collaborations with LUMS and the Government of Pakistan.
+          Right now, I'm obsessed with expanding my cloud computing toolkit
+          (hello, AWS certifications!) and building my custom appointment
+          scheduling software,{" "}
+          <span className="text-white font-medium">schdlr</span>.
         </p>
 
         {/* Quick facts */}
-        <div className="glass-flat rounded-xl p-5 flex flex-col gap-3">
+        <div className="glass-flat rounded-xl p-5 mt-5 flex flex-col gap-3">
           <span className="text-white text-lg font-bold">Quick Facts</span>
           <ul className="flex flex-col gap-2">
             {[
-              "Based in Rochester",
-              "Web Developer",
-              "Pakistani",
-              "Self-taught / BS + MS Computer Science",
+              "Based in Rochester, NY (Pursuing MS CS at RIT)",
+              "Started as an artist, pivoted to tech",
+              "Expertise in Web Dev, AI, ML & Deep Learning",
+              "Grinding for AWS Cloud Certifications",
+              "Building a passion project called schdlr",
+              "Pakistani tech enthusiast with industry experience",
             ].map((fact) => (
               <li
                 key={fact}
