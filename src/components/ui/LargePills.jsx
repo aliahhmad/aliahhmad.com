@@ -1,3 +1,5 @@
+// src/components/ui/LargePills.jsx
+
 function LargePills({ items }) {
   return (
     <div className="flex items-center gap-2">

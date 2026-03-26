@@ -5,6 +5,10 @@ import LargePills from "../ui/LargePills";
 import SmallPills from "../ui/SmallPills";
 import CTALinks from "../ui/CTALinks";
 import BrowserFrame from "../ui/BrowserFrame";
+import StatCards from "../ui/StatCards";
+import FeatureCards from "../ui/FeatureCards";
+import TechStackCards from "../ui/TechStackCards";
+import SimpleArchitectureFlow from "../ui/SimpleArchitectureFlow";
 import ScreenshotGallery from "../ui/ScreenshotGallery";
 
 const TABS = ["Overview", "Features", "Tech Stack", "Screenshots"];
@@ -148,93 +152,35 @@ const PortfolioProject = () => {
             </p>
 
             {/* Stat cards — same scrollable row pattern as FeaturedWork */}
-            <div className="flex overflow-x-auto gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-              {[
+            <StatCards
+              stats={[
                 { num: "5", label: "Pages" },
                 { num: "1", label: "APIs" },
                 { num: "∞", label: "CSS tweaks" },
-              ].map(({ num, label }) => (
-                <div
-                  key={label}
-                  className="glass-flat flex-shrink-0 w-36 rounded-xl text-white flex flex-col items-center justify-center gap-1 py-5"
-                >
-                  <span className="text-3xl font-bold">{num}</span>
-                  <span className="text-white/50 text-xs uppercase">
-                    {label}
-                  </span>
-                </div>
-              ))}
-            </div>
+              ]}
+            />
           </div>
         )}
 
         {/* FEATURES */}
-        {activeTab === "Features" && (
-          <div className="flex overflow-x-auto overflow-y-visible gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-            {features.map((f) => (
-              <div
-                key={f.title}
-                className="glass-flat flex-shrink-0 w-60 rounded-xl text-white p-5 flex flex-col gap-3 hover:scale-[1.01] transition-transform duration-200"
-              >
-                <h3 className="text-lg font-bold">{f.title}</h3>
-                <p className="text-white/70 text-base leading-relaxed">
-                  {f.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        )}
+        {activeTab === "Features" && <FeatureCards features={features} />}
 
         {/* TECH STACK */}
         {activeTab === "Tech Stack" && (
           <div className="flex flex-col gap-6">
             {/* Stack cards */}
-            <div className="flex overflow-x-auto gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-              {techStack.map((group) => (
-                <div
-                  key={group.category}
-                  className="glass-flat flex-shrink-0 w-52 rounded-xl p-5 flex flex-col gap-2"
-                >
-                  <span className="text-white text-lg font-bold">
-                    {group.category}
-                  </span>
-                  <ul className="flex flex-col gap-2">
-                    {group.items.map((item) => (
-                      <li
-                        key={item}
-                        className="flex text-white/70 items-center gap-2 text-base"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-white/60 flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+            <TechStackCards techStacks={techStack} />
 
             {/* Architecture flow */}
             <div className="glass-flat rounded-xl p-5 flex flex-col gap-4">
               <span className="text-white text-lg font-bold">Architecture</span>
-              <div className="flex items-center gap-2 flex-wrap">
-                {[
+              <SimpleArchitectureFlow
+                nodes={[
                   { title: "Client", sub: "React + Tailwind + Mapbox" },
                   { title: "Vercel CDN", sub: "Hosting + Routing" },
                   { title: "Serverless Function", sub: "Email via Mailtrap" },
-                ].map((node, i, arr) => (
-                  <div key={node.title} className="flex items-center gap-2">
-                    <div className="glass-flat rounded-xl px-4 py-3 text-white flex flex-col items-center gap-0.5">
-                      <span className="text-base font-semibold">
-                        {node.title}
-                      </span>
-                      <span className="text-white/40 text-sm">{node.sub}</span>
-                    </div>
-                    {i < arr.length - 1 && (
-                      <span className="text-white/30 text-lg">→</span>
-                    )}
-                  </div>
-                ))}
-              </div>
+                ]}
+              />
             </div>
           </div>
         )}

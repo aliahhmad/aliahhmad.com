@@ -1,3 +1,5 @@
+// src/components/ui/BrowserFrame.jsx
+
 function BrowserFrame({ url, imageSrc, altText }) {
   return (
     <>
