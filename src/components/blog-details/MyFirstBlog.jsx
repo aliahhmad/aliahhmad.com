@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import LargePills from "../ui/LargePills";
+import SmallPills from "../ui/SmallPills";
 
 // Lightweight content array used for the horizontal passions section.
 const passions = [
@@ -30,14 +32,12 @@ const MyFirstBlog = () => {
     <section className="bg-surface-deep flex flex-col gap-10 px-10 min-h-screen">
       {/* ── Hero ── */}
       <div className="flex flex-col gap-4">
-        <div className="flex items-center gap-2">
-          <span className="self-start text-sm font-semibold uppercase text-white/40 glass-flat px-3 py-1 rounded-full">
-            Blog
-          </span>
-          <span className="self-start text-sm font-semibold uppercase text-blue-400/70 glass-flat px-3 py-1 rounded-full">
-            First Post
-          </span>
-        </div>
+        <LargePills
+          items={[
+            { name: "Blog", color: "text-white/40" },
+            { name: "First Post", color: "text-blue-400/70" },
+          ]}
+        />
 
         <h1 className="text-white text-4xl font-bold">My First Blog</h1>
 
@@ -47,14 +47,7 @@ const MyFirstBlog = () => {
           of the internet!
         </p>
 
-        <div className="flex items-center gap-3">
-          <span className="glass-flat text-white/50 text-sm px-3 py-1 rounded-full">
-            24th March 2026
-          </span>
-          <span className="glass-flat text-white/50 text-sm px-3 py-1 rounded-full">
-            3 min read
-          </span>
-        </div>
+        <SmallPills items={["March 24, 2026", "3 min read"]} />
       </div>
 
       {/* ── Introduction ── */}
