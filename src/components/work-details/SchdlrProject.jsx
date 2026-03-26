@@ -1,7 +1,8 @@
 // src/components/project-details/SchdlrProject.jsx
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Pills from "../ui/Pills";
+import LargePills from "../ui/LargePills";
+import SmallPills from "../ui/SmallPills";
 
 const TABS = ["Overview", "Features", "Tech Stack", "Screenshots"];
 
@@ -54,14 +55,12 @@ const SchdlrProject = () => {
     <section className="bg-surface-deep flex flex-col gap-8 px-10 min-h-screen">
       {/* ── Hero ── */}
       <div className="flex flex-col gap-4">
-        <div className="flex items-center gap-2">
-          <span className="self-start text-sm font-semibold uppercase text-white/40 glass-flat px-3 py-1 rounded-full">
-            In Development
-          </span>
-          <span className="self-start text-sm font-semibold uppercase text-amber-400/70 glass-flat px-3 py-1 rounded-full">
-            Coming Soon
-          </span>
-        </div>
+        <LargePills
+          items={[
+            { name: "Featured Project", color: "text-white/40" },
+            { name: "Coming Soon", color: "text-amber-400/70" },
+          ]}
+        />
 
         <h1 className="text-white text-4xl font-bold">Schdlr</h1>
 
@@ -71,7 +70,16 @@ const SchdlrProject = () => {
         </p>
 
         {/* Pills */}
-        <Pills items={["React", "Express", "PostgreSQL", "Bootstrap", "Stripe", "Vercel"]} />
+        <SmallPills
+          items={[
+            "React",
+            "Express",
+            "PostgreSQL",
+            "Bootstrap",
+            "Stripe",
+            "Vercel",
+          ]}
+        />
 
         {/* CTA links — disabled while in development */}
         <div className="flex gap-3">
