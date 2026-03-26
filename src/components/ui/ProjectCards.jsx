@@ -1,3 +1,4 @@
+// Card layout for grouped project summaries inside a detail page tab.
 function ProjectCards({ projects }) {
   return (
     <div className="flex overflow-x-auto overflow-y-visible gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">

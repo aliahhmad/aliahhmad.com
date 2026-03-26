@@ -1,4 +1,3 @@
-// src/components/home/Experiences.jsx
 import React from "react";
 
 const EXPERIENCES = [
@@ -19,6 +18,7 @@ const EXPERIENCES = [
   },
 ];
 
+// Displays internship experience in a compact timeline-style list.
 const Experiences = () => {
   return (
     <section className="bg-surface-deep flex flex-col gap-6 py-2 px-10">

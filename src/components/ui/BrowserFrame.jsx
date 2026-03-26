@@ -1,10 +1,9 @@
-// src/components/ui/BrowserFrame.jsx
-
+// Wraps screenshots in a shared browser-style frame used across project pages.
 function BrowserFrame({ url, imageSrc, altText }) {
   return (
     <>
       <div className="glass rounded-2xl overflow-hidden">
-        {/* Fake browser bar */}
+        {/* Decorative browser chrome keeps screenshots visually consistent. */}
         <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/5">
           <span className="w-3 h-3 aspect-square rounded-full bg-red-400/80 flex-shrink-0" />
           <span className="w-3 h-3 aspect-square rounded-full bg-yellow-400/80 flex-shrink-0" />
@@ -13,7 +12,7 @@ function BrowserFrame({ url, imageSrc, altText }) {
             {url}
           </span>
         </div>
-        {/* Main screenshot */}
+        {/* Fall back to a neutral placeholder while screenshots are not available yet. */}
         {imageSrc ? (
           <img
             src={imageSrc}

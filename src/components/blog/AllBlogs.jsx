@@ -1,7 +1,7 @@
-// src/components/blog/AllBlogs.js
 import { useNavigate } from "react-router-dom";
 import blogs from "../../data/allBlogs.json";
 
+// Lists every blog entry from the shared content JSON and routes to its detail page.
 function AllBlogs() {
   const navigate = useNavigate();
 

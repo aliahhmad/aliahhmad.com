@@ -1,4 +1,3 @@
-// src/pages/WorkPage.jsx
 import { useParams } from 'react-router-dom';
 import NavBar from "../components/layout/NavBar";
 import PageFooter from "../components/layout/PageFooter";
@@ -14,11 +13,13 @@ const workPages = {
   3: <AppBreweryProject />
 };
 
+// Resolves a project detail view from the route param and shared work metadata.
 function WorkPage() {
   const { id } = useParams();
   const page = workPages[id];
 
   const workDetails = works.find((work) => work.id === Number(id));
+  // The title is driven from the shared work data so cards and detail pages stay in sync.
   usePageTitle(workDetails.title);
 
   return (

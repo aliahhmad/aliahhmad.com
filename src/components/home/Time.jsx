@@ -1,7 +1,7 @@
-// src/components/home/Time.jsx
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import NightlightOutlinedIcon from "@mui/icons-material/NightlightOutlined";
 
+// Shows the current time in Rochester with a simple day/night indicator.
 const Time = () => {
   const date = new Date();
 

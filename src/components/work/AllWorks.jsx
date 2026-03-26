@@ -1,7 +1,7 @@
-// src/components/work/AllWork.jsx
 import { useNavigate } from "react-router-dom";
 import projects from "../../data/allWorks.json"
 
+// Displays the complete project catalogue using the shared work metadata.
 const AllWorks = () => {
   const navigate = useNavigate();
 

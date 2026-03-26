@@ -1,9 +1,9 @@
-/* src/styles/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  /* Shared deep surface tone used as the default page background. */
   --bg: lab(8.30603% 0.618212 -2.16573);
 }
 
@@ -23,9 +23,11 @@ body {
 }
 
 html {
+  /* Reserve scrollbar space to reduce layout shift between short and long pages. */
   scrollbar-gutter: stable;
 }
 
+/* Subtle hover animation used on the tilted profile photo. */
 @keyframes wiggle {
   0%,
   100% {
@@ -46,6 +48,7 @@ html {
 @layer components {
   .glass,
   .glass-flat {
+    /* Core liquid-glass treatment shared across cards, pills, and floating UI. */
     @apply backdrop-blur-[40px] backdrop-saturate-[180%];
     border: 0.5px solid rgba(255, 255, 255, 0.25);
     border-top: 0.5px solid rgba(255, 255, 255, 0.4);
@@ -65,6 +68,7 @@ html {
 
 @layer base {
   :root {
+    /* Expose the same surface color through Tailwind's theme token system. */
     --color-surface-deep: lab(8.30603% 0.618212 -2.16573);
   }
 }

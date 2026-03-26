@@ -1,6 +1,6 @@
-// src/components/blog-details/MyFirstBlog.jsx
 import { Link } from "react-router-dom";
 
+// Lightweight content array used for the horizontal passions section.
 const passions = [
   {
     label: "Crafting Solutions",
@@ -24,6 +24,7 @@ const passions = [
   },
 ];
 
+// First long-form blog post rendered as a standalone article page.
 const MyFirstBlog = () => {
   return (
     <section className="bg-surface-deep flex flex-col gap-10 px-10 min-h-screen">

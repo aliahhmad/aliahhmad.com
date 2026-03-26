@@ -1,4 +1,3 @@
-// src/components/project-details/SchdlrProject.jsx
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import LargePills from "../ui/LargePills";
@@ -46,15 +45,7 @@ const techStack = [
   { category: "Deployment", items: ["Vercel"] },
 ];
 
-const screenshots = [
-  { label: "📸 Booking Flow", caption: "Appointment Booking" },
-  { label: "📸 Business Dashboard", caption: "Admin Overview" },
-  { label: "📸 Invoice View", caption: "Invoice Detail" },
-  { label: "📸 Client Portal", caption: "Booking History" },
-  { label: "📸 Stripe Checkout", caption: "Payment Flow" },
-  { label: "📸 Feedback Form", caption: "Post-Appointment Review" },
-];
-
+// Project detail page for Schdlr, using the same shared building blocks as the other work pages.
 const SchdlrProject = () => {
   const [activeTab, setActiveTab] = useState("Overview");
 
@@ -114,7 +105,7 @@ const SchdlrProject = () => {
         altText="Project Screenshot"
       />
 
-      {/* ── Tabs ── */}
+      {/* Tabs switch between content sections without leaving the detail page. */}
       <div className="flex overflow-x-auto gap-1 glass-flat rounded-xl p-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {TABS.map((tab) => (
           <button
@@ -173,10 +164,8 @@ const SchdlrProject = () => {
         {/* TECH STACK */}
         {activeTab === "Tech Stack" && (
           <div className="flex flex-col gap-6">
-            {/* Stack cards */}
             <TechStackCards techStacks={techStack} />
 
-            {/* Architecture flow */}
             <div className="glass-flat rounded-xl p-5 flex flex-col gap-4">
               <span className="text-white text-lg font-bold">Architecture</span>
               <SimpleArchitectureFlow nodes={[

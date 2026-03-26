@@ -1,4 +1,4 @@
-// src/components/home/Hero.jsx
+// Landing section for the homepage with the core intro and profile image.
 const Hero = () => {
   return (
     <section

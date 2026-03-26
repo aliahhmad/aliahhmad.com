@@ -1,5 +1,4 @@
-// src/components/ui/LargePills.jsx
-
+// Status-style pills used near the top of project detail pages.
 function LargePills({ items }) {
   return (
     <div className="flex items-center gap-2">

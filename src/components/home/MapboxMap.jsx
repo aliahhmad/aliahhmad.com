@@ -1,14 +1,16 @@
-// src/components/home/MapboxMap.jsx
 import { useRef } from "react";
 import Map, { Marker } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 const MARKER = { longitude: -77.6757882, latitude: 43.0838534 };
-const LOCATION = { longitude: -77.676067, latitude: 43.0821873 }; // A bit below to load map correctly
+// The map starts slightly below the marker so the fly-in animation lands with
+// the marker in a more balanced visual position inside the card.
+const LOCATION = { longitude: -77.676067, latitude: 43.0821873 };
 
 const MapboxMap = () => {
   const mapRef = useRef();
 
+  // Animate from a broad world view into Rochester once the map tiles finish loading.
   function handleLoad() {
     mapRef.current.flyTo({
       center: [LOCATION.longitude, LOCATION.latitude],
@@ -19,6 +21,7 @@ const MapboxMap = () => {
   }
 
   return (
+    // This map is decorative on the landing page, so interactions stay disabled.
     <Map
       ref={mapRef}
       initialViewState={{

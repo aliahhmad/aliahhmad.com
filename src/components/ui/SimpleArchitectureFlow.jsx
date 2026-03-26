@@ -1,3 +1,4 @@
+// Renders a compact left-to-right architecture flow from simple node data.
 function SimpleArchitectureFlow({ nodes }) {
   return (
     <div className="flex items-center gap-2 flex-wrap">

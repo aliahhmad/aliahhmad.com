@@ -1,4 +1,3 @@
-// src/components/layout/NavBar.jsx
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
@@ -38,13 +37,15 @@ const Navbar = () => {
   const [isContactFromOpen, setContactFromOpen] = useState(false);
 
   useEffect(() => {
+    // Hide the floating nav while scrolling down so content has more room,
+    // then bring it back as soon as the user reverses direction.
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY) {
-        setVisible(false); // scrolling down
+        setVisible(false);
       } else {
-        setVisible(true); // scrolling up
+        setVisible(true);
       }
 
       setLastScrollY(currentScrollY);
@@ -56,6 +57,7 @@ const Navbar = () => {
 
   return (
     <>
+      {/* Floating bottom nav keeps primary routes reachable across long pages. */}
       <nav
         className={`fixed left-1/2 -translate-x-1/2 z-[9998] glass flex items-center gap-1 px-2 h-16 rounded-xl transition-all duration-300 ${
           visible ? "bottom-8" : "-bottom-24"

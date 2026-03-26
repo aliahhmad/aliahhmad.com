@@ -1,3 +1,4 @@
+// Reusable stack cards grouped by category for project detail pages.
 function TechStackCards({ techStacks }) {
   return (
     <div className="flex overflow-x-auto gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">

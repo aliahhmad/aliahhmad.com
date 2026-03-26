@@ -1,4 +1,3 @@
-// src/components/project-details/AppBreweryProject.jsx
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import LargePills from "../ui/LargePills";
@@ -95,6 +94,7 @@ const screenshots = [
   },
 ];
 
+// Project detail page for the App Brewery coursework collection.
 const AppBreweryProject = () => {
   const [activeTab, setActiveTab] = useState("Overview");
 
@@ -148,7 +148,7 @@ const AppBreweryProject = () => {
         altText="Project Screenshot"
       />
 
-      {/* ── Tabs ── */}
+      {/* Tabs switch between content sections without leaving the detail page. */}
       <div className="flex overflow-x-auto gap-1 glass-flat rounded-xl p-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {TABS.map((tab) => (
           <button

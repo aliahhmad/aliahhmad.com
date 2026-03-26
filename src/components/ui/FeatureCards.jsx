@@ -1,3 +1,4 @@
+// Reusable horizontally scrollable feature card list.
 function FeatureCards({ features }) {
   return (
     <div className="flex overflow-x-auto overflow-y-visible gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">

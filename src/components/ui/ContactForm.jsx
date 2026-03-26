@@ -1,8 +1,8 @@
-// src/components/ui/ContactForm.jsx
 import { useState } from "react";
 import { createPortal } from "react-dom";
 import toast from "react-hot-toast";
 
+// Renders the contact modal and submits messages to the serverless contact API.
 function ContactForm({ isOpen, onClose }) {
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
@@ -35,6 +35,7 @@ function ContactForm({ isOpen, onClose }) {
 
   if (!isOpen) return null;
 
+  // Render into document.body so the modal is not constrained by parent stacking contexts.
   return createPortal(
     <div
       className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-2xl flex items-center justify-center animate-in fade-in duration-200"

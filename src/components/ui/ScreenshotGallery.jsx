@@ -1,8 +1,8 @@
-// src/components/ui/ScreenshotGallery.jsx
 import { useState } from "react";
 
+// Scrollable screenshot rail with a simple lightbox for enlarged previews.
 const ScreenshotGallery = ({ screenshots }) => {
-  const [lightbox, setLightbox] = useState(null); // holds the active screenshot object
+  const [lightbox, setLightbox] = useState(null);
 
   return (
     <>
@@ -48,6 +48,7 @@ const ScreenshotGallery = ({ screenshots }) => {
         >
           <div
             className="glass flex flex-col gap-4 p-4 rounded-2xl z-[9999] relative max-w-3xl w-full mx-6"
+            // Stop clicks inside the modal from bubbling to the overlay and closing it.
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-end">

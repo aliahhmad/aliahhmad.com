@@ -1,8 +1,7 @@
-// src/components/home/AboutMe.jsx
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import ContactForm from "../ui/ContactForm";
 
+// Introduces the person behind the portfolio and provides a direct contact entry point.
 const AboutMe = () => {
   const [isContactFromOpen, setContactFromOpen] = useState(false);
 
@@ -32,6 +31,7 @@ const AboutMe = () => {
         <hr className="border-t border-white opacity-20 w-full my-4" />
         <div className="text-white text-lg">
           <p>
+            {/* Reuse the same modal contact flow from the nav to keep outreach consistent. */}
             <a
               onClick={() => setContactFromOpen(true)}
               className="underline decoration-dotted"

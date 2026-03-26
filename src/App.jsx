@@ -9,9 +9,11 @@ import { Toaster } from 'react-hot-toast'
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
+// Registers the app's top-level routes and global UI providers.
 function App() {
   return (
     <div>
+      {/* Route-level pages own their own layout composition and page titles. */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/work" element={<AllWorksPage />} />
@@ -19,6 +21,7 @@ function App() {
         <Route path="/blog" element={<AllBlogsPage />} />
         <Route path="/blog/:id" element={<BlogPage />} />
       </Routes>
+      {/* Global utilities stay mounted once so any page can trigger them. */}
       <Toaster position="top-center" />
       <Analytics />
       <SpeedInsights />

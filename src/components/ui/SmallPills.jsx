@@ -1,5 +1,4 @@
-// src/components/ui/Pills.jsx
-
+// Compact tech or keyword pills used beneath project titles.
 function Pills({ items }) {
     return (
         <div className="flex flex-wrap gap-2">

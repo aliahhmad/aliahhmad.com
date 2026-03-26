@@ -1,10 +1,11 @@
-// src/components/work/FeaturedWork.jsx
 import { useNavigate, Link } from "react-router-dom";
 import projects from "../../data/allWorks.json";
 
+// Highlights a curated subset of projects on the home page.
 const FeaturedWork = () => {
   const navigate = useNavigate();
 
+  // Keep this list explicit so homepage curation stays separate from raw data order.
   const featuredWordId = [1, 2, 3];
   const featuredProjects = projects.filter((item) =>
     featuredWordId.includes(item.id),

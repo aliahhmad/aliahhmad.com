@@ -1,3 +1,4 @@
+// Small metric cards for quick project or content highlights.
 function StatCards({ stats }) {
   return (
     <div className="flex overflow-x-auto gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
