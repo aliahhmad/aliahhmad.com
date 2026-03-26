@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import LargePills from "../ui/LargePills";
 import SmallPills from "../ui/SmallPills";
+import CTALinks from "../ui/CTALinks";
+import BrowserFrame from "../ui/BrowserFrame";
 import ScreenshotGallery from "../ui/ScreenshotGallery";
 
 const TABS = ["Overview", "Features", "Tech Stack", "Screenshots"];
@@ -85,40 +87,28 @@ const PortfolioProject = () => {
         />
 
         {/* CTA links */}
-        <div className="flex gap-3">
-          <a
-            href="https://aliahhmad.com/"
-            className="glass-flat text-white text-base font-semibold px-5 py-2 rounded-full hover:scale-[1.02] transition-transform duration-200"
-          >
-            Live Site ↗
-          </a>
-          <a
-            href="https://github.com/aliahhmad/aliahhmad.com"
-            className="text-white/60 border border-white/20 text-base font-semibold px-5 py-2 rounded-full hover:text-white hover:border-white/40 transition-all duration-200"
-          >
-            GitHub ↗
-          </a>
-        </div>
+        <CTALinks
+          links={[
+            {
+              label: "Live Site ↗",
+              href: "https://aliahhmad.com/",
+              type: "glass-flat",
+            },
+            {
+              label: "GitHub ↗",
+              href: "https://github.com/aliahhmad/aliahhmad.com",
+              type: "outline",
+            },
+          ]}
+        />
       </div>
 
       {/* ── Hero screenshot ── */}
-      <div className="glass rounded-2xl overflow-hidden">
-        {/* Fake browser bar */}
-        <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/5">
-          <span className="w-3 h-3 aspect-square rounded-full bg-red-400/80 flex-shrink-0" />
-          <span className="w-3 h-3 aspect-square rounded-full bg-yellow-400/80 flex-shrink-0" />
-          <span className="w-3 h-3 aspect-square rounded-full bg-green-400/80 flex-shrink-0" />
-          <span className="ml-3 text-white/30 text-xs glass-flat px-3 py-0.5 rounded-md">
-            aliahhmad.com
-          </span>
-        </div>
-        {/* Main screenshot */}
-        <img
-          src="/projects/aliahhmad/home_page.png"
-          alt="Project Screenshot"
-          className="w-full object-cover"
-        />
-      </div>
+      <BrowserFrame
+        url="aliahhmad.com"
+        imageSrc="/projects/aliahhmad/home_page.png"
+        altText="Project Screenshot"
+      />
 
       {/* ── Tabs ── */}
       <div className="flex overflow-x-auto gap-1 glass-flat rounded-xl p-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
