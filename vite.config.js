@@ -7,6 +7,8 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': 'http://localhost:3000'
-    }
-  }
+    },
+    // This fixes 404s on refresh for React Router
+    historyApiFallback: true
+  },
 })

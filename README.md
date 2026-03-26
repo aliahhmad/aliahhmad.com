@@ -209,4 +209,4 @@ At the time of writing, ESLint may flag `process` inside `api/contact.js` unless
 
 ---
 
-AI assistance was used for parts of the code comments and documentation in this project.
+**Note:** AI assistance was used in generating code comments and documentation throughout this project.
