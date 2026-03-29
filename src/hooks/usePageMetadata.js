@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const SITE_URL = "https://www.aliahhmad.com";
 const DEFAULT_DESCRIPTION =
-  "I'm Ali Ahmad, a full stack developer pursuing my MS in Computer Science at Rochester Institute of Technology (RIT) with a 4.0 GPA. I’m passionate about building scalable, production-ready systems.";
+  "Ali Ahmad is a full stack developer at RIT building modern web applications with React, Node.js, and cloud technologies. Explore his portfolio and projects.";
 
 function upsertMeta(name, content) {
   let element = document.head.querySelector(`meta[name="${name}"]`);
