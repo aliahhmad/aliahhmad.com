@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="flex justify-between items-end h-full">
         <div className="flex flex-col gap-1 text-white">
           <div className="text-xl opacity-70">Hello there,</div>
-          <div className="text-5xl font-bold">I'm Ali.</div>
+          <h1 className="text-5xl font-bold">I'm Ali.</h1>
         </div>
         <div className="w-32 h-36 sm:w-48 sm:h-56 rounded-3xl overflow-hidden rotate-[2deg] wiggle cursor-pointer flex-shrink-0">
           <img
@@ -21,10 +21,10 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className="text-white text-base opacity-50 max-w-sm sm:mt-2 mt-4">
+      <p className="text-white text-base opacity-50 max-w-sm sm:mt-2 mt-4">
         I design and build things for the web. I'm currently an MS student at
         RIT.
-      </div>
+      </p>
     </section>
   );
 };

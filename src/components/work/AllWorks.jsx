@@ -36,8 +36,8 @@ const AllWorks = () => {
               </div>
             )}
             <div className="flex flex-col gap-2 p-4">
-              <h3 className="text-lg font-bold">{project.title}</h3>
-              <p className="opacity-70">{project.description}</p>
+              <div className="text-lg font-bold">{project.title}</div>
+              <div className="opacity-70">{project.description}</div>
             </div>
           </div>
         ))}
