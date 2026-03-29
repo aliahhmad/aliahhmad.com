@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aliahhmad.com/sitemap.xml
+Sitemap: https://www.aliahhmad.com/sitemap.xml

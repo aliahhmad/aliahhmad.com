@@ -7,11 +7,11 @@ import FeaturedWork from "../components/work/FeaturedWork";
 import Connect from "../components/home/Connect";
 import PageFooter from "../components/layout/PageFooter";
 import NavBar from "../components/layout/NavBar";
-import usePageTitle from "../hooks/usePageTitle";
+import usePageMetadata from "../hooks/usePageMetadata";
 
 // Home page combines the sticky map backdrop with the primary landing sections.
 function HomePage() {
-  usePageTitle("Home");
+  usePageMetadata({ title: "Home", path: "/" });
   return (
     <div className="relative max-w-4xl mx-auto">
       <NavBar />

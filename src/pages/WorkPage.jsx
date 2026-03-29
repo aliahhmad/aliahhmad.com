@@ -4,7 +4,7 @@ import PageFooter from "../components/layout/PageFooter";
 import SchdlrProject from "../components/work-details/SchdlrProject"
 import AliAhhmadProject from "../components/work-details/AliAhhmadProject"
 import AppBreweryProject from "../components/work-details/AppBreweryProject"
-import usePageTitle from "../hooks/usePageTitle";
+import usePageMetadata from "../hooks/usePageMetadata";
 import works from "../data/allWorks.json";
 
 const workPages = {
@@ -20,7 +20,7 @@ function WorkPage() {
 
   const workDetails = works.find((work) => work.id === Number(id));
   // The title is driven from the shared work data so cards and detail pages stay in sync.
-  usePageTitle(workDetails.title);
+  usePageMetadata({ title: workDetails.title, path: `/work/${id}` });
 
   return (
     <div className="relative max-w-4xl mx-auto pt-10">

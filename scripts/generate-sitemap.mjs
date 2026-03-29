@@ -11,7 +11,7 @@ const projectRoot = path.resolve(__dirname, "..");
 const publicDir = path.join(projectRoot, "public");
 const outputPath = path.join(publicDir, "sitemap.xml");
 
-const siteUrl = "https://aliahhmad.com";
+const siteUrl = "https://www.aliahhmad.com";
 const lastmod = new Date().toISOString().split("T")[0];
 
 const staticRoutes = ["/", "/work", "/blog"];
