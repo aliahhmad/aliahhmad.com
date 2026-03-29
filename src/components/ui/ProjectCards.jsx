@@ -3,16 +3,16 @@ function ProjectCards({ projects }) {
   return (
     <div className="flex overflow-x-auto overflow-y-visible gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
       {projects.map((p) => (
-        <div
+        <article
           key={p.title}
           className="glass-flat flex-shrink-0 w-72 rounded-xl text-white p-5 flex flex-col gap-3 hover:scale-[1.01] transition-transform duration-200"
         >
           <div className="flex items-center gap-2">
             <div className="flex flex-col">
-              <span className="text-lg font-bold leading-tight">{p.title}</span>
-              <span className="text-white/40 text-xs uppercase font-semibold">
+              <h3 className="text-lg font-bold leading-tight">{p.title}</h3>
+              <p className="text-white/40 text-xs uppercase font-semibold">
                 {p.type}
-              </span>
+              </p>
             </div>
           </div>
           <p className="text-white/70 text-base leading-relaxed">{p.desc}</p>
@@ -26,7 +26,7 @@ function ProjectCards({ projects }) {
               </span>
             ))}
           </div>
-        </div>
+        </article>
       ))}
     </div>
   );

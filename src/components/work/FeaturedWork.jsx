@@ -17,10 +17,10 @@ const FeaturedWork = () => {
 
   return (
     <section className="bg-surface-deep flex flex-col gap-6 py-2 px-10">
-      <div className="text-white text-2xl">Featured Works</div>
+      <h2 className="text-white text-2xl">Featured Works</h2>
       <div className="flex overflow-x-auto overflow-y-visible gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {featuredProjects.map((project) => (
-          <div
+          <article
             key={project.id}
             className="glass-flat flex-shrink-0 w-64 rounded-xl text-white cursor-pointer transition-transform duration-200 hover:scale-[1.01]"
             onClick={() => handleClick(`/work/${project.id}`)}
@@ -42,10 +42,10 @@ const FeaturedWork = () => {
               </div>
             )}
             <div className="flex flex-col gap-2 p-4">
-              <div className="text-lg font-bold">{project.title}</div>
-              <div className="opacity-70">{project.description}</div>
+              <h3 className="text-lg font-bold">{project.title}</h3>
+              <p className="opacity-70">{project.description}</p>
             </div>
-          </div>
+          </article>
         ))}
       </div>
       <div className="flex items-end justify-end">

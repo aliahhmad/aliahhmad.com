@@ -9,10 +9,10 @@ const Hero = () => {
       }}
     >
       <div className="flex justify-between items-end h-full">
-        <div className="flex flex-col gap-1 text-white">
-          <div className="text-xl opacity-70">Hello there,</div>
+        <header className="flex flex-col gap-1 text-white">
+          <p className="text-xl opacity-70">Hello there,</p>
           <h1 className="text-5xl font-bold">I'm Ali.</h1>
-        </div>
+        </header>
         <div className="w-32 h-36 sm:w-48 sm:h-56 rounded-3xl overflow-hidden rotate-[2deg] wiggle cursor-pointer flex-shrink-0">
           <img
             src="/home/profile_picture.jpg"

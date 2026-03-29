@@ -8,7 +8,7 @@ const AboutMe = () => {
   return (
     <section className="bg-surface-deep flex flex-col py-2 px-10">
       <div className="flex flex-col gap-4 text-white">
-        <div className="text-2xl">About Me</div>
+        <h2 className="text-2xl">About Me</h2>
         <div className="flex flex-col gap-2 text-lg opacity-70 ">
           <p>
             I'm a full stack developer currently doing my MS in Computer Science
@@ -29,25 +29,23 @@ const AboutMe = () => {
       </div>
       <div>
         <hr className="border-t border-white opacity-20 w-full my-4" />
-        <div className="text-white text-lg">
-          <p>
-            {/* Reuse the same modal contact flow from the nav to keep outreach consistent. */}
-            <a
-              onClick={() => setContactFromOpen(true)}
-              className="underline decoration-dotted"
-            >
-              Contact Me
-            </a>{" "}
-            <span className="opacity-70">or say hi on</span>{" "}
-            <a
-              href="https://www.linkedin.com/in/aliahhmad/"
-              className="underline decoration-dotted"
-            >
-              Linked In
-            </a>
-            <span className="opacity-70">{" :)"}</span>
-          </p>
-        </div>
+        <p className="text-white text-lg">
+          {/* Reuse the same modal contact flow from the nav to keep outreach consistent. */}
+          <a
+            onClick={() => setContactFromOpen(true)}
+            className="underline decoration-dotted"
+          >
+            Contact Me
+          </a>{" "}
+          <span className="opacity-70">or say hi on</span>{" "}
+          <a
+            href="https://www.linkedin.com/in/aliahhmad/"
+            className="underline decoration-dotted"
+          >
+            Linked In
+          </a>
+          <span className="opacity-70">{" :)"}</span>
+        </p>
         <hr className="border-t border-white opacity-20 w-full my-4" />
         <ContactForm
           isOpen={isContactFromOpen}

@@ -9,7 +9,7 @@ const ScreenshotGallery = ({ screenshots }) => {
       {/* ── Gallery Row ── */}
       <div className="flex overflow-x-auto overflow-y-visible gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {screenshots.map((s) => (
-          <div
+          <figure
             key={s.label}
             className="glass-flat flex-shrink-0 w-64 rounded-xl text-white overflow-hidden hover:scale-[1.01] transition-transform duration-200 cursor-pointer"
             onClick={() => s.path && setLightbox(s)}
@@ -33,10 +33,10 @@ const ScreenshotGallery = ({ screenshots }) => {
                 </span>
               </div>
             )}
-            <div className="flex flex-col gap-1 p-4 border-t border-white/10">
+            <figcaption className="flex flex-col gap-1 p-4 border-t border-white/10">
               <p className="text-sm font-medium opacity-70">{s.caption}</p>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
         ))}
       </div>
 
@@ -59,16 +59,16 @@ const ScreenshotGallery = ({ screenshots }) => {
                 ✕
               </button>
             </div>
-            <div className="flex flex-col gap-4">
+            <figure className="flex flex-col gap-4">
               <img
                 src={lightbox.path}
                 alt={lightbox.caption}
                 className="w-full rounded-xl object-contain max-h-[75vh]"
               />
-              <p className="text-white/70 text-base text-center">
+              <figcaption className="text-white/70 text-base text-center">
                 {lightbox.caption}
-              </p>
-            </div>
+              </figcaption>
+            </figure>
           </div>
         </div>
       )}

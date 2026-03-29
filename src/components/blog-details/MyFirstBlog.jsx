@@ -31,7 +31,7 @@ const MyFirstBlog = () => {
   return (
     <section className="bg-surface-deep flex flex-col gap-10 px-10 min-h-screen">
       {/* ── Hero ── */}
-      <div className="flex flex-col gap-4">
+      <header className="flex flex-col gap-4">
         <LargePills
           items={[
             { name: "Blog", color: "text-white/40" },
@@ -48,10 +48,10 @@ const MyFirstBlog = () => {
         </p>
 
         <SmallPills items={["March 24, 2026", "3 min read"]} />
-      </div>
+      </header>
 
       {/* ── Introduction ── */}
-      <div className="flex flex-col gap-4">
+      <section className="flex flex-col gap-4">
         <h2 className="text-white text-2xl font-bold">Hey, welcome!</h2>
         <p className="text-white/70 text-base leading-relaxed">
           I've been wanting to start writing for a while now, and today I
@@ -63,10 +63,10 @@ const MyFirstBlog = () => {
           I am, where I come from, and what you can expect to find here. So grab
           a coffee, get comfortable, and let's get into it.
         </p>
-      </div>
+      </section>
 
       {/* ── About Me ── */}
-      <div className="flex flex-col gap-4">
+      <section className="flex flex-col gap-4">
         <h2 className="text-white text-2xl font-bold">A bit about me</h2>
         <p className="text-white/70 text-base leading-relaxed">
           I'm a{" "}
@@ -98,8 +98,8 @@ const MyFirstBlog = () => {
         </p>
 
         {/* Quick facts */}
-        <div className="glass-flat rounded-xl p-5 mt-5 flex flex-col gap-3">
-          <span className="text-white text-lg font-bold">Quick Facts</span>
+        <aside className="glass-flat rounded-xl p-5 mt-5 flex flex-col gap-3">
+          <h3 className="text-white text-lg font-bold">Quick Facts</h3>
           <ul className="flex flex-col gap-2">
             {[
               "Based in Rochester, NY (Pursuing MS CS at RIT)",
@@ -118,11 +118,11 @@ const MyFirstBlog = () => {
               </li>
             ))}
           </ul>
-        </div>
-      </div>
+        </aside>
+      </section>
 
       {/* ── Passions & Hobbies ── */}
-      <div className="flex flex-col gap-4">
+      <section className="flex flex-col gap-4">
         <h2 className="text-white text-2xl font-bold">Passions & Hobbies</h2>
         <p className="text-white/70 text-base leading-relaxed">
           Outside of work and code, there's a lot that keeps me going. Here are
@@ -130,21 +130,21 @@ const MyFirstBlog = () => {
         </p>
         <div className="flex overflow-x-auto gap-4 py-2 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {passions.map((item) => (
-            <div
+            <article
               key={item.label}
               className="glass-flat flex-shrink-0 w-56 rounded-xl p-4 flex flex-col gap-3 hover:scale-[1.01] transition-transform duration-200"
             >
-              <span className="text-white font-semibold">{item.label}</span>
+              <h3 className="text-white font-semibold">{item.label}</h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 {item.desc}
               </p>
-            </div>
+            </article>
           ))}
         </div>
-      </div>
+      </section>
 
       {/* ── Closing note ── */}
-      <div className="glass-flat rounded-xl p-6 flex flex-col gap-3">
+      <aside className="glass-flat rounded-xl p-6 flex flex-col gap-3">
         <span className="text-2xl">🙏</span>
         <p className="text-white/70 text-base leading-relaxed">
           Thanks for taking the time to read my first post. This is just the
@@ -152,7 +152,7 @@ const MyFirstBlog = () => {
           If anything resonated with you, feel free to reach out. See you in the
           next one!
         </p>
-      </div>
+      </aside>
 
       {/* ── Footer ── */}
       <div className="flex items-end justify-end mt-auto">

@@ -11,9 +11,9 @@ function AllBlogs() {
 
   return (
     <section className="bg-surface-deep flex flex-col gap-6 py-2 px-10">
-      <div className="text-white text-2xl">All Blogs</div>
+      <h1 className="text-white text-2xl">All Blogs</h1>
       {blogs.map((blog) => (
-        <div
+        <article
           key={blog.id}
           className="glass-flat flex-shrink-0 rounded-xl text-white cursor-pointer transition-transform duration-200 hover:scale-[1.01]"
           onClick={() => handleClick(`/blog/${blog.id}`)}
@@ -25,7 +25,7 @@ function AllBlogs() {
             </span>
             <p className="opacity-70">{blog.description}</p>
           </div>
-        </div>
+        </article>
       ))}
     </section>
   );

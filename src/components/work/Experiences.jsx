@@ -22,29 +22,29 @@ const EXPERIENCES = [
 const Experiences = () => {
   return (
     <section className="bg-surface-deep flex flex-col gap-6 py-2 px-10">
-      <div className="text-white text-2xl">Experiences</div>
+      <h2 className="text-white text-2xl">Experiences</h2>
       <div>
         {EXPERIENCES.map((exp) => (
           <React.Fragment key={exp.id}>
-            <div className="flex gap-3 items-center text-white">
+            <article className="flex gap-3 items-center text-white">
               <img
                 src={exp.picture}
                 alt={exp.company}
                 className="w-9 h-9 object-cover rounded-xl shrink-0"
               />
               <div className="flex flex-1 flex-col sm:flex-row sm:justify-between sm:items-center gap-1 text-lg">
-                <div>
+                <h3>
                   <span className="opacity-70">
                     {exp.title}
                     {" - "}
                   </span>
                   {exp.company}
-                </div>
-                <div className="opacity-70">
+                </h3>
+                <p className="opacity-70">
                   {exp.date}
-                </div>
+                </p>
               </div>
-            </div>
+            </article>
             <hr className="border-t border-white opacity-20 w-full my-4" />
           </React.Fragment>
         ))}

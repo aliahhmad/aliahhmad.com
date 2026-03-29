@@ -52,7 +52,7 @@ const SchdlrProject = () => {
   return (
     <section className="bg-surface-deep flex flex-col gap-8 px-10 min-h-screen">
       {/* ── Hero ── */}
-      <div className="flex flex-col gap-4">
+      <header className="flex flex-col gap-4">
         <LargePills
           items={[
             { name: "Featured Project", color: "text-white/40" },
@@ -97,7 +97,7 @@ const SchdlrProject = () => {
             ]}
           />
         </div>
-      </div>
+      </header>
 
       {/* ── Hero screenshot placeholder ── */}
       <BrowserFrame
@@ -166,8 +166,8 @@ const SchdlrProject = () => {
           <div className="flex flex-col gap-6">
             <TechStackCards techStacks={techStack} />
 
-            <div className="glass-flat rounded-xl p-5 flex flex-col gap-4">
-              <span className="text-white text-lg font-bold">Architecture</span>
+            <section className="glass-flat rounded-xl p-5 flex flex-col gap-4">
+              <h2 className="text-white text-lg font-bold">Architecture</h2>
               <SimpleArchitectureFlow nodes={[
                 { title: "Client", sub: "React + Bootstrap" },
                 { title: "Vercel Edge", sub: "CDN + Routing" },
@@ -175,7 +175,7 @@ const SchdlrProject = () => {
                 { title: "Stripe", sub: "Payments + Webhooks" },
                 { title: "PostgreSQL", sub: "All Data" },
               ]} />
-            </div>
+            </section>
           </div>
         )}
 

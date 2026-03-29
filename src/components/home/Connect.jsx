@@ -19,7 +19,7 @@ const Connect = () => {
   return (
     <section className="bg-surface-deep flex flex-col gap-6 py-2 px-10">
       <div className="text-white flex flex-col gap-4">
-        <div className="text-2xl">Let's connect</div>
+        <h2 className="text-2xl">Let's connect</h2>
         <p className="text-lg opacity-60">
           Feel free to connect with me on any of these platforms!
         </p>
