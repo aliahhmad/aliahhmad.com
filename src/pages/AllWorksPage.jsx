@@ -1,5 +1,6 @@
 import NavBar from "../components/layout/NavBar";
 import Experiences from "../components/work/Experiences";
+import Certifications from "../components/home/Certifications";
 import PageFooter from "../components/layout/PageFooter";
 import AllWorks from "../components/work/AllWorks";
 import usePageMetadata from "../hooks/usePageMetadata";
@@ -10,7 +11,6 @@ function AllWorksPage() {
   return (
     <div className="relative max-w-4xl mx-auto pt-10">
       <NavBar />
-      <Experiences />
       <AllWorks />
       <PageFooter />
     </div>

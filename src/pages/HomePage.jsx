@@ -3,6 +3,7 @@ import Time from "../components/home/Time";
 import Hero from "../components/home/Hero";
 import AboutMe from "../components/home/AboutMe";
 import Experiences from "../components/work/Experiences";
+import Certifications from "../components/home/Certifications";
 import FeaturedWork from "../components/work/FeaturedWork";
 import Connect from "../components/home/Connect";
 import PageFooter from "../components/layout/PageFooter";
@@ -31,6 +32,7 @@ function HomePage() {
           <AboutMe />
         </div>
         <Experiences />
+        <Certifications />
         <FeaturedWork />
         <Connect />
         <PageFooter />
