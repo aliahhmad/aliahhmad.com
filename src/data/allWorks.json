@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "title": "Schdlr (Appointment Scheduling App)",
+    "title": "Schdlr (Scheduling & Invoicing SaaS)",
     "type": "Web Development",
     "date": "March 2026 - Present",
-    "description": "A full-stack scheduling platform supporting businesses, staff, and clients. Features service management, conflict-checked bookings, auto-generated invoices, Stripe payments, and post-appointment feedback."
+    "description": "A multi-tenant appointment scheduling and invoicing SaaS for service businesses, designed with React, AWS Lambda, API Gateway, RDS PostgreSQL, Prisma, Cognito, SES, EventBridge, and Stripe."
   },
   {
     "id": 2,

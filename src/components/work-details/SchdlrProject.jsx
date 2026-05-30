@@ -10,39 +10,72 @@ import TechStackCards from "../ui/TechStackCards";
 import SimpleArchitectureFlow from "../ui/SimpleArchitectureFlow";
 import ScreenshotGallery from "../ui/ScreenshotGallery";
 
-const TABS = ["Overview", "Features", "Tech Stack", "Screenshots"];
+const TABS = ["Overview", "Features", "Tech Stack", "Roadmap", "Screenshots"];
 
 const features = [
   {
     title: "Business Onboarding",
-    desc: "Owners set up their profile, services, pricing, staff, and invoicing rules — everything needed to start accepting bookings.",
+    desc: "Owners configure business profiles, hours, time zones, cancellation rules, services, staff, tax, currency, and invoice branding.",
   },
   {
-    title: "Smart Booking",
-    desc: "Clients and guests can book appointments with real-time conflict checks. Guest bookings use secure token links — no account needed.",
+    title: "Service-Based Booking",
+    desc: "Clients and guests pick a service, provider, available slot, and booking details with conflict checks before confirmation.",
   },
   {
     title: "Invoicing & Billing",
-    desc: "Auto-generated invoices on booking or completion. Full lifecycle tracking: Draft → Sent → Paid → Overdue → Void.",
+    desc: "Invoices can be generated on booking, appointment completion, or manually with line items, taxes, discounts, and lifecycle tracking.",
   },
   {
     title: "Stripe Payments",
-    desc: "Clients pay invoices via Stripe Checkout. Webhooks update payment status in real time. Admin-handled refunds.",
+    desc: "Clients and guests pay through Stripe Checkout while verified webhooks update invoice state and trigger receipts.",
   },
   {
-    title: "Reminders & Receipts",
-    desc: "System sends automated email reminders before appointments and receipts after payment — all without manual effort.",
+    title: "Email Automation",
+    desc: "SES-backed confirmations, invoice links, receipts, reminders, and feedback requests keep the customer journey moving.",
   },
   {
     title: "Feedback Loop",
-    desc: "After each appointment, clients receive a feedback link with ratings, quick tags, and comments. Trends surface in the dashboard.",
+    desc: "Post-appointment feedback captures ratings, quick tags, and comments, then surfaces trends by service and provider.",
+  },
+  {
+    title: "Audit Trail",
+    desc: "Business-critical events such as invoice edits, cancellations, refunds, and settings changes are logged for accountability.",
   },
 ];
 
 const techStack = [
-  { category: "Frontend", items: ["React", "Bootstrap CSS"] },
-  { category: "Backend", items: ["Express.js", "PostgreSQL", "Stripe"] },
-  { category: "Deployment", items: ["Vercel"] },
+  { category: "Frontend", items: ["React", "Vite", "Bootstrap CSS"] },
+  { category: "Backend", items: ["Node.js", "TypeScript", "AWS Lambda", "API Gateway"] },
+  { category: "Data", items: ["RDS PostgreSQL", "Prisma ORM", "S3"] },
+  { category: "Platform", items: ["Cognito", "SES", "EventBridge", "CloudWatch", "CDK"] },
+  { category: "Payments", items: ["Stripe Checkout", "Stripe Webhooks"] },
+];
+
+const roadmap = [
+  {
+    title: "Foundation",
+    desc: "Set up the React + Vite frontend, Node.js + TypeScript Lambda backend, PostgreSQL database, Prisma schema, and environment strategy.",
+  },
+  {
+    title: "Auth & Onboarding",
+    desc: "Add Cognito-backed admin, staff, and client roles, then build business profile, services, staff, and invoice settings workflows.",
+  },
+  {
+    title: "Booking Core",
+    desc: "Ship service selection, availability lookup, slot booking, conflict checks, confirmations, and authenticated client history.",
+  },
+  {
+    title: "Guest Flow",
+    desc: "Support email-only booking with secure manage links for rescheduling, cancellation, invoice access, and payment.",
+  },
+  {
+    title: "Billing System",
+    desc: "Create invoice and payment tables, lifecycle states, generated line items, Stripe Checkout, webhooks, receipts, and refunds.",
+  },
+  {
+    title: "Automation",
+    desc: "Use EventBridge, Lambda, and SES for reminders, feedback emails, overdue invoice handling, and operational monitoring.",
+  },
 ];
 
 // Project detail page for Schdlr, using the same shared building blocks as the other work pages.
@@ -63,19 +96,24 @@ const SchdlrProject = () => {
         <h1 className="text-white text-4xl font-bold">Schdlr</h1>
 
         <p className="text-white/60 text-lg max-w-xl">
-          A multi-tenant appointment scheduling platform with smart invoicing,
-          Stripe payments, and role-based access — built for real businesses.
+          A multi-tenant appointment scheduling and invoicing SaaS for service
+          businesses, designed around AWS serverless infrastructure and real
+          payment workflows.
         </p>
 
         {/* Pills */}
         <SmallPills
           items={[
             "React",
-            "Express",
-            "PostgreSQL",
-            "Bootstrap",
+            "Vite",
+            "Lambda",
+            "API Gateway",
+            "RDS PostgreSQL",
+            "Prisma",
             "Stripe",
-            "Vercel",
+            "Cognito",
+            "SES",
+            "CDK",
           ]}
         />
 
@@ -130,10 +168,10 @@ const SchdlrProject = () => {
           <div className="flex flex-col gap-6">
             <p className="text-white/70 text-base leading-relaxed">
               Schdlr is a full-stack, multi-tenant scheduling platform designed
-              for service businesses — think consultants, clinics, tutors, and
-              repair services. It handles the entire client lifecycle: booking,
-              invoicing, payment collection, reminders, and post-appointment
-              feedback.
+              for service businesses like consultants, clinics, tutors, and
+              repair teams. The MVP centers on one-on-one, service-based
+              appointments with pricing, availability, conflict checks,
+              invoicing, payments, reminders, and post-appointment feedback.
             </p>
             <p className="text-white/70 text-base leading-relaxed">
               The platform supports four actor types —{" "}
@@ -144,13 +182,21 @@ const SchdlrProject = () => {
               role-based access and a full audit trail. Guests can book and pay
               without ever creating an account, via secure token links.
             </p>
+            <p className="text-white/70 text-base leading-relaxed">
+              The planned production architecture uses React + Vite on the
+              frontend, API Gateway and Lambda for serverless APIs, Prisma with
+              RDS PostgreSQL for relational scheduling and billing data, Cognito
+              for authenticated roles, S3 for business assets, SES for email
+              automation, EventBridge for reminders, Stripe for payments, and
+              CDK for infrastructure as code.
+            </p>
 
             {/* Stat cards */}
             <StatCards stats={[
               { num: "4", label: "Actor Types" },
-              { num: "6", label: "Core Modules" },
-              { num: "1", label: "Stripe Integration" },
-              { num: "∞", label: "Bookings" },
+              { num: "7", label: "Core Modules" },
+              { num: "12", label: "Build Phases" },
+              { num: "AWS", label: "Serverless Stack" },
             ]} />
           </div>
         )}
@@ -169,12 +215,46 @@ const SchdlrProject = () => {
             <section className="glass-flat rounded-xl p-5 flex flex-col gap-4">
               <h2 className="text-white text-lg font-bold">Architecture</h2>
               <SimpleArchitectureFlow nodes={[
-                { title: "Client", sub: "React + Bootstrap" },
-                { title: "Vercel Edge", sub: "CDN + Routing" },
-                { title: "Express API", sub: "Bookings + Invoices" },
-                { title: "Stripe", sub: "Payments + Webhooks" },
-                { title: "PostgreSQL", sub: "All Data" },
+                { title: "Frontend", sub: "React + Vite" },
+                { title: "Hosting", sub: "Amplify or S3 + CloudFront" },
+                { title: "API", sub: "Gateway + Lambda" },
+                { title: "Data", sub: "Prisma + RDS PostgreSQL" },
+                { title: "Automation", sub: "SES + EventBridge" },
+                { title: "Payments", sub: "Stripe Webhooks" },
               ]} />
+            </section>
+
+            <section className="glass-flat rounded-xl p-5 flex flex-col gap-4">
+              <h2 className="text-white text-lg font-bold">Core Data Model</h2>
+              <SimpleArchitectureFlow nodes={[
+                { title: "Organization", sub: "Tenant + profile" },
+                { title: "Users", sub: "Admin, staff, clients" },
+                { title: "Services", sub: "Duration + pricing" },
+                { title: "Appointments", sub: "Slots + status" },
+                { title: "Invoices", sub: "Items + payments" },
+                { title: "Feedback", sub: "Ratings + tags" },
+              ]} />
+            </section>
+          </div>
+        )}
+
+        {/* ROADMAP */}
+        {activeTab === "Roadmap" && (
+          <div className="flex flex-col gap-6">
+            <FeatureCards features={roadmap} />
+
+            <section className="glass-flat rounded-xl p-5 flex flex-col gap-3">
+              <h2 className="text-white text-lg font-bold">Later Additions</h2>
+              <SmallPills
+                items={[
+                  "RBAC billing role",
+                  "SQS async jobs",
+                  "ElastiCache availability cache",
+                  "Step Functions workflows",
+                  "SMS reminders",
+                  "Invoice adjustments",
+                ]}
+              />
             </section>
           </div>
         )}
