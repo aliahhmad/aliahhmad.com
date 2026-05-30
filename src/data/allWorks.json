@@ -2,12 +2,14 @@
   {
     "id": 1,
     "title": "Schdlr (Appointment Scheduling App)",
+    "type": "Web Development",
     "date": "March 2026 - Present",
     "description": "A full-stack scheduling platform supporting businesses, staff, and clients. Features service management, conflict-checked bookings, auto-generated invoices, Stripe payments, and post-appointment feedback."
   },
   {
     "id": 2,
     "title": "aliahhmad.com (Personal Portfolio)",
+    "type": "Web Development",
     "date": "March 2026 - Present",
     "description": "A personal portfolio website showcasing projects, experience, and skills — designed and built from scratch with react and express to reflect a clean, modern developer identity.",
     "image": "/projects/aliahhmad/home_page.png"
@@ -15,8 +17,25 @@
   {
     "id": 3,
     "title": "App Brewery Course Projects",
+    "type": "Courses",
     "date": "2024 - 2025",
     "description": "A collection of full-stack capstone projects built through Angela Yu's Complete Web Development Bootcamp — covering HTML/CSS, JavaScript, Node.js, Express, PostgreSQL, and React.",
     "image": "/projects/appbrewery/course_page.png"
+  },
+  {
+    "id": 4,
+    "title": "Predicting Default Risk of Lending Club Loans",
+    "type": "AI/ML",
+    "date": "January 2026 - May 2026",
+    "description": "A machine learning project that predicts Lending Club loan default risk from 2.26M accepted loans, using leakage-aware preprocessing, time-ordered validation, and tuned Logistic Regression, MLP, and XGBoost models.",
+    "image": "/projects/lendingclub/results.png"
+  },
+  {
+    "id": 5,
+    "title": "Uncertainty-Aware Traffic Routing",
+    "type": "AI/ML",
+    "date": "January 2026 - May 2026",
+    "description": "An AI project that models New York State roads as a probabilistic graph, using UCS, A* search, traffic-aware costs, and Monte Carlo simulation to find routes that balance speed and reliability under uncertain congestion.",
+    "image": "/projects/trafficrouting/results.png"
   }
 ]

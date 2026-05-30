@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import projects from "../../data/allWorks.json"
 
+const typeOrder = ["Web Development", "AI/ML", "Courses"];
+
 // Displays the complete project catalogue using the shared work metadata.
 const AllWorks = () => {
   const navigate = useNavigate();
@@ -12,36 +14,43 @@ const AllWorks = () => {
   return (
     <section className="bg-surface-deep flex flex-col gap-6 py-2 px-10">
       <h1 className="text-white text-2xl">All Works</h1>
-      <div className="flex overflow-x-auto overflow-y-visible gap-4 py-2 px-1 sm:flex-wrap sm:overflow-x-visible [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-        {projects.map((project) => (
-          <article
-            key={project.id}
-            className="glass-flat flex-shrink-0 w-64 rounded-xl text-white cursor-pointer transition-transform duration-200 hover:scale-[1.01]"
-            onClick={() => handleClick(`/work/${project.id}`)}
-          >
-            {project.image ? (
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-40 object-cover rounded-t-xl"
-              />
-            ) : (
-              <div
-                style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)" }}
-                className="w-full h-40 rounded-t-xl flex flex-col items-center justify-center gap-3"
-              >
-                <span className="text-white/20 text-sm italic">
-                  Screenshot coming soon
-                </span>
-              </div>
-            )}
-            <div className="flex flex-col gap-2 p-4">
-              <h2 className="text-lg font-bold">{project.title}</h2>
-              <p className="opacity-70">{project.description}</p>
-            </div>
-          </article>
-        ))}
-      </div>
+      {typeOrder.map((type) => (
+        <div key={type} className="flex flex-col gap-4">
+          <h2 className="text-white text-xl">{type}</h2>
+          <div className="flex overflow-x-auto overflow-y-visible gap-4 py-2 px-1 sm:flex-wrap sm:overflow-x-visible [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            {projects
+              .filter((project) => project.type === type)
+              .map((project) => (
+                <article
+                  key={project.id}
+                  className="glass-flat flex-shrink-0 w-64 rounded-xl text-white cursor-pointer transition-transform duration-200 hover:scale-[1.01]"
+                  onClick={() => handleClick(`/work/${project.id}`)}
+                >
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-40 object-cover rounded-t-xl"
+                    />
+                  ) : (
+                    <div
+                      style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)" }}
+                      className="w-full h-40 rounded-t-xl flex flex-col items-center justify-center gap-3"
+                    >
+                      <span className="text-white/20 text-sm italic">
+                        Screenshot coming soon
+                      </span>
+                    </div>
+                  )}
+                  <div className="flex flex-col gap-2 p-4">
+                    <h3 className="text-lg font-bold">{project.title}</h3>
+                    <p className="opacity-70">{project.description}</p>
+                  </div>
+                </article>
+              ))}
+          </div>
+        </div>
+      ))}
     </section>
   );
 }
