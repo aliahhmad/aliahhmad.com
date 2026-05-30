@@ -114,7 +114,7 @@ const TrafficRoutingProject = () => {
         <LargePills
           items={[
             { name: "Artificial Intelligence", color: "text-white/40" },
-            { name: "CSCI-630", color: "text-green-400/70" },
+            { name: "Coursework Project", color: "text-green-400/70" },
           ]}
         />
 
@@ -142,6 +142,11 @@ const TrafficRoutingProject = () => {
             {
               label: "Presentation ↗",
               href: "https://drive.google.com/file/d/1FjW4jvxAAOPBz9PHXmvtOYFBH-EihfGp/view?usp=sharing",
+              type: "outline",
+            },
+            {
+              label: "Dataset ↗",
+              href: "https://docs.google.com/spreadsheets/d/164fPYnmcTjsCdTGS8qHgueLM4mZT1Rs4fXORk0Mni_A/edit?usp=sharing",
               type: "outline",
             },
           ]}

@@ -96,7 +96,7 @@ const LendingClubProject = () => {
         <LargePills
           items={[
             { name: "Machine Learning", color: "text-white/40" },
-            { name: "CSCI-635", color: "text-green-400/70" },
+            { name: "Coursework Project", color: "text-green-400/70" },
           ]}
         />
 
@@ -124,6 +124,11 @@ const LendingClubProject = () => {
             {
               label: "Presentation ↗",
               href: "https://drive.google.com/file/d/199-tsKZEIkBDDboflzrL1oinyUV1dxFJ/view?usp=sharing",
+              type: "outline",
+            },
+            {
+              label: "Dataset ↗",
+              href: "https://www.kaggle.com/datasets/wordsforthewise/lending-club",
               type: "outline",
             },
           ]}
