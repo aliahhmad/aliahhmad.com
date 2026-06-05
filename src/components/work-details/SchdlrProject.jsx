@@ -78,6 +78,19 @@ const roadmap = [
   },
 ];
 
+const screenshots = [
+  {
+    label: "📸 Home Page",
+    caption: "Home Page Hero",
+    path: "/projects/schdlr/home_page.png",
+  },
+  {
+    label: "📸 Login Page",
+    caption: "Cognito Login Form",
+    path: "/projects/schdlr/login_page.png",
+  },
+];
+
 // Project detail page for Schdlr, using the same shared building blocks as the other work pages.
 const SchdlrProject = () => {
   const [activeTab, setActiveTab] = useState("Overview");
@@ -129,7 +142,7 @@ const SchdlrProject = () => {
               },
               {
                 label: "GitHub ↗",
-                href: "https://github.com/aliahhmad",
+                href: "https://github.com/aliahhmad/schdlr",
                 type: "outline",
               },
             ]}
@@ -139,7 +152,8 @@ const SchdlrProject = () => {
 
       {/* ── Hero screenshot placeholder ── */}
       <BrowserFrame
-        url="schdlr.aliahhmad.com/dashboard"
+        url="schdlr.com/home"
+        imageSrc="/projects/schdlr/home_page.png"
         altText="Project Screenshot"
       />
 
@@ -259,17 +273,9 @@ const SchdlrProject = () => {
           </div>
         )}
 
-        {/* SCREENSHOTS — Coming Soon */}
+        {/* SCREENSHOTS */}
         {activeTab === "Screenshots" && (
-          <div className="flex flex-col items-center justify-center gap-4 py-16 glass-flat rounded-2xl">
-            <p className="text-white/40 text-lg font-bold">
-              Screenshots coming soon
-            </p>
-            <p className="text-white/25 text-base max-w-xs text-center">
-              This project is currently in development. Check back once the UI
-              is live.
-            </p>
-          </div>
+          <ScreenshotGallery screenshots={screenshots} />
         )}
       </div>
 

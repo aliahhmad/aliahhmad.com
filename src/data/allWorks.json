@@ -4,7 +4,8 @@
     "title": "Schdlr (Scheduling & Invoicing SaaS)",
     "type": "Web Development",
     "date": "March 2026 - Present",
-    "description": "A multi-tenant appointment scheduling and invoicing SaaS for service businesses, designed with React, AWS Lambda, API Gateway, RDS PostgreSQL, Prisma, Cognito, SES, EventBridge, and Stripe."
+    "description": "A multi-tenant appointment scheduling and invoicing SaaS for service businesses, designed with React, AWS Lambda, API Gateway, RDS PostgreSQL, Prisma, Cognito, SES, EventBridge, and Stripe.",
+    "image": "/projects/schdlr/home_page.png"
   },
   {
     "id": 2,
