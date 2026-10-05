@@ -2,6 +2,13 @@ import React from "react";
 
 const EXPERIENCES = [
   {
+    id: "rit",
+    title: "Frontend Developer",
+    company: "Rochester Institute of Technology",
+    date: "Sep 2026 - Current",
+    picture: "/work/rit_logo.png",
+  },
+  {
     id: "conrad",
     title: "Developer Intern",
     company: "Conrad Labs",
