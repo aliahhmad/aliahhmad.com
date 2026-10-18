@@ -5,6 +5,8 @@ import WorkPage from './pages/WorkPage'
 import AllWorksPage from './pages/AllWorksPage'
 import BlogPage from './pages/BlogPage'
 import AllBlogsPage from './pages/AllBlogsPage'
+import AllExperiencesPage from './pages/AllExperiencesPage'
+import ExperiencePage from './pages/ExperiencePage'
 import { Toaster } from 'react-hot-toast'
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
@@ -18,6 +20,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/work" element={<AllWorksPage />} />
         <Route path="/work/:id" element={<WorkPage/>} />
+        <Route path="/experiences" element={<AllExperiencesPage />} />
+        <Route path="/experience/:id" element={<ExperiencePage />} />
         <Route path="/blog" element={<AllBlogsPage />} />
         <Route path="/blog/:id" element={<BlogPage />} />
       </Routes>

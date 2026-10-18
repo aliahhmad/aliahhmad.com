@@ -4,6 +4,7 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import CodeOutlinedIcon from "@mui/icons-material/CodeOutlined";
 import NewspaperOutlinedIcon from "@mui/icons-material/NewspaperOutlined";
 import MessageOutlinedIcon from "@mui/icons-material/MessageOutlined";
+import BadgeOutlinedIcon from "@mui/icons-material/BadgeOutlined";
 import ContactForm from "../ui/ContactForm";
 
 const items = [
@@ -14,6 +15,14 @@ const items = [
     icon: <AccountCircleOutlinedIcon />,
   },
   { id: "work", label: "Work", path: "/work", icon: <CodeOutlinedIcon /> },
+  {
+    id: "experience",
+    label: "Experience",
+    path: "/experiences",
+    icon: <BadgeOutlinedIcon />,
+    isActive: (pathname) =>
+      pathname === "/experiences" || pathname.startsWith("/experience/"),
+  },
   {
     id: "blog",
     label: "Blog",
@@ -63,24 +72,35 @@ const Navbar = () => {
           visible ? "bottom-8" : "-bottom-24"
         }`}
       >
-        {items.map((item) => (
-          <button
-            key={item.id}
-            onClick={item.id === "contact" ? () => setContactFromOpen(true) : () => navigate(item.path)}
-            className="group flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-transform duration-200 hover:scale-[1.05]"
-          >
-            <span
-              className={`${location.pathname === item.path ? "text-white" : "text-white/50 group-hover:text-white/80"}`}
+        {items.map((item) => {
+          const isActive =
+            item.isActive?.(location.pathname) ??
+            location.pathname === item.path;
+
+          return (
+            <button
+              key={item.id}
+              onClick={
+                item.id === "contact"
+                  ? () => setContactFromOpen(true)
+                  : () => navigate(item.path)
+              }
+              className="group flex flex-col items-center gap-1 px-2 sm:px-4 py-2 rounded-xl transition-transform duration-200 hover:scale-[1.05]"
+              aria-current={isActive ? "page" : undefined}
             >
-              {item.icon}
-            </span>
-            <span
-              className={`text-xs ${location.pathname === item.path ? "text-white" : "text-white/50 group-hover:text-white/80"}`}
-            >
-              {item.label}
-            </span>
-          </button>
-        ))}
+              <span
+                className={`${isActive ? "text-white" : "text-white/50 group-hover:text-white/80"}`}
+              >
+                {item.icon}
+              </span>
+              <span
+                className={`text-xs ${isActive ? "text-white" : "text-white/50 group-hover:text-white/80"}`}
+              >
+                {item.label}
+              </span>
+            </button>
+          );
+        })}
       </nav>
       <ContactForm
         isOpen={isContactFromOpen}

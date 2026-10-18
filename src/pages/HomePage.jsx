@@ -2,7 +2,7 @@ import MapboxMap from "../components/home/MapboxMap";
 import Time from "../components/home/Time";
 import Hero from "../components/home/Hero";
 import AboutMe from "../components/home/AboutMe";
-import Experiences from "../components/work/Experiences";
+import Experiences from "../components/experience/Experiences";
 import Certifications from "../components/home/Certifications";
 import FeaturedWork from "../components/work/FeaturedWork";
 import Connect from "../components/home/Connect";

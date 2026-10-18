@@ -1,0 +1,26 @@
+[
+  {
+    "id": "3",
+    "title": "Frontend Developer",
+    "company": "Rochester Institute of Technology",
+    "date": "Sep 2026 - Present",
+    "picture": "/work/rit_logo.png",
+    "summary": "Developing and maintaining PawPrints, RIT Student Government’s petition platform, with a focus on accessibility, UI improvements, and ongoing platform maintenance."
+  },
+  {
+    "id": "2",
+    "title": "Developer Intern",
+    "company": "Conrad Labs",
+    "date": "Jun 2023 - Aug 2023",
+    "picture": "/work/conrad_labs_logo.png",
+    "summary": "Built and deployed a production Ruby on Rails Flex Agent app with local LLMs, alongside webhook integrations that automated business workflows."
+  },
+  {
+    "id": "1",
+    "title": "Machine Learning Intern",
+    "company": "Wateen Telecom",
+    "date": "Jul 2022 - Aug 2022",
+    "picture": "/work/wateen_telecom_logo.jpg",
+    "summary": "Deployed a machine learning model to classify over 1,000 customer feedback emails daily with more than 90% accuracy."
+  }
+]

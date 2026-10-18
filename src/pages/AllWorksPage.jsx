@@ -1,5 +1,5 @@
 import NavBar from "../components/layout/NavBar";
-import Experiences from "../components/work/Experiences";
+import Experiences from "../components/experience/Experiences";
 import Certifications from "../components/home/Certifications";
 import PageFooter from "../components/layout/PageFooter";
 import AllWorks from "../components/work/AllWorks";

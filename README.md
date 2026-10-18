@@ -8,6 +8,7 @@ This project is a single-page React application with client-side routing for:
 
 - a map-backed home page
 - a curated work section with detailed project pages
+- an experience listing with resume-based detail pages for RIT, Conrad Labs, and Wateen Telecom
 - a blog index and blog detail views
 - a modal contact form that posts to a custom serverless endpoint
 
@@ -72,6 +73,8 @@ The frontend is deployed alongside `api/contact.js`, which forwards contact subm
 │   ├── components/
 │   │   ├── blog/
 │   │   ├── blog-details/
+│   │   ├── experience/
+│   │   ├── experience-detail/
 │   │   ├── home/
 │   │   ├── layout/
 │   │   ├── ui/
@@ -96,6 +99,8 @@ The frontend is deployed alongside `api/contact.js`, which forwards contact subm
 - `/` - home page
 - `/work` - all work/projects
 - `/work/:id` - project detail page
+- `/experiences` - all professional experiences
+- `/experience/:id` - experience details (`rit`, `conrad`, or `wateen`)
 - `/blog` - all blog posts
 - `/blog/:id` - blog detail page
 
@@ -110,6 +115,12 @@ The frontend is deployed alongside `api/contact.js`, which forwards contact subm
 
 - `src/components/work-details/`
   Detail pages for each featured project, built from reusable UI building blocks.
+
+- `src/components/experience/`
+  Homepage experience list, all-experiences listing, and shared experience navigation. Listing metadata lives in `src/data/allExperiences.json`.
+
+- `src/components/experience-detail/`
+  Separate RIT, Conrad Labs, and Wateen Telecom detail components, each with its own layout and content. `ExperiencePage` maps route IDs to these components, following the project detail pattern.
 
 - `src/components/ui/`
   Shared presentational pieces such as pills, browser frames, galleries, stat cards, and architecture flows.
