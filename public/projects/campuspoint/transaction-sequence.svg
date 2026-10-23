@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1160" viewBox="0 0 1200 1160" fill="none">
+  <title>CampusPoint two-phase commit sequence</title>
+  <desc>Campus persists an operation and prepares local changes. Points prepares its own database and votes Yes. Campus records an immutable COMMIT or ABORT, delivers it to Points, and Points verifies the decision before finishing its prepared transaction. After Points acknowledges, Campus finishes its participant and saves completion. Dashed arrows indicate replies.</desc>
+  <defs>
+    <linearGradient id="background" x2="1200" y2="1160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#18272B"/>
+      <stop offset="1" stop-color="#121315"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M1 1 9 5 1 9" fill="#A5D8C8"/>
+    </marker>
+    <marker id="reply" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M1 1 9 5 1 9" fill="#B3BFC0"/>
+    </marker>
+  </defs>
+  <path fill="url(#background)" d="M0 0h1200v1160H0z"/>
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <text x="30" y="43" fill="#F4F6F6" font-size="28" font-weight="600">Two-phase commit</text>
+    <text x="30" y="76" fill="#A6B2B4" font-size="18">Prepare locally. Record one decision. Deliver until acknowledged.</text>
+
+    <g stroke="#FFFFFF" stroke-opacity=".22" stroke-width="1.5">
+      <path d="M120 164v896M440 164v896M760 164v896M1080 164v896"/>
+    </g>
+    <g fill="#243235" stroke="#FFFFFF" stroke-opacity=".25">
+      <rect x="20" y="106" width="200" height="58" rx="10"/>
+      <rect x="340" y="106" width="200" height="58" rx="10"/>
+      <rect x="660" y="106" width="200" height="58" rx="10"/>
+      <rect x="980" y="106" width="200" height="58" rx="10"/>
+      <rect x="20" y="1060" width="200" height="58" rx="10"/>
+      <rect x="340" y="1060" width="200" height="58" rx="10"/>
+      <rect x="660" y="1060" width="200" height="58" rx="10"/>
+      <rect x="980" y="1060" width="200" height="58" rx="10"/>
+    </g>
+    <g fill="#F4F6F6" font-size="19" font-weight="600" text-anchor="middle">
+      <text x="120" y="141">Campus coordinator</text>
+      <text x="440" y="141">Campus PostgreSQL</text>
+      <text x="760" y="141">Points API</text>
+      <text x="1080" y="141">Points PostgreSQL</text>
+      <text x="120" y="1095">Campus coordinator</text>
+      <text x="440" y="1095">Campus PostgreSQL</text>
+      <text x="760" y="1095">Points API</text>
+      <text x="1080" y="1095">Points PostgreSQL</text>
+    </g>
+
+    <path fill="#A5D8C8" fill-opacity=".07" d="M20 178h1160v28H20zM20 548h1160v28H20z"/>
+    <g fill="#A5D8C8" font-size="13" font-weight="600" letter-spacing="2">
+      <text x="32" y="198">PHASE 1 · PREPARE</text>
+      <text x="32" y="568">PHASE 2 · DECIDE &amp; FINISH</text>
+    </g>
+
+    <g stroke="#A5D8C8" stroke-width="1.8" marker-end="url(#arrow)">
+      <path d="M120 242h320"/>
+      <path d="M120 302h320"/>
+      <path d="M120 362h640"/>
+      <path d="M760 422h320"/>
+      <path d="M120 618h320"/>
+      <path d="M120 678h640"/>
+      <path d="M760 738H120"/>
+      <path d="M760 858h320"/>
+      <path d="M120 978h320"/>
+      <path d="M120 1038h320"/>
+    </g>
+    <g stroke="#B3BFC0" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#reply)">
+      <path d="M1080 482H760"/>
+      <path d="M760 528H120"/>
+      <path d="M120 798h640"/>
+      <path d="M760 918H120"/>
+    </g>
+
+    <g fill="#E2E9E7" font-size="18" text-anchor="middle">
+      <text x="280" y="230">Persist operation and identifiers</text>
+      <text x="280" y="269">Business writes +</text>
+      <text x="280" y="291" font-family="ui-monospace, monospace" font-size="17">PREPARE TRANSACTION</text>
+      <text x="440" y="350">Authenticated prepare request</text>
+      <text x="920" y="389">Business writes +</text>
+      <text x="920" y="411" font-family="ui-monospace, monospace" font-size="17">PREPARE TRANSACTION</text>
+      <text x="920" y="470" fill="#B3BFC0">Durable preparation</text>
+      <text x="440" y="516" fill="#B3BFC0">Yes vote</text>
+      <text x="280" y="585">Record immutable</text>
+      <text x="280" y="607">COMMIT or ABORT</text>
+      <text x="440" y="666">Deliver saved decision</text>
+      <text x="440" y="726">Verify recorded coordinator decision</text>
+      <text x="440" y="786" fill="#B3BFC0">Return saved COMMIT or ABORT</text>
+      <text x="920" y="825" font-family="ui-monospace, monospace" font-size="17">COMMIT PREPARED or</text>
+      <text x="920" y="847" font-family="ui-monospace, monospace" font-size="17">ROLLBACK PREPARED</text>
+      <text x="440" y="906" fill="#B3BFC0">Acknowledge Points completion</text>
+      <text x="280" y="945">Finish Campus participant</text>
+      <text x="280" y="967" fill="#A6B2B4" font-size="16">Commit or roll back prepared work</text>
+      <text x="280" y="1005">Save acknowledgements</text>
+      <text x="280" y="1027">and finished state</text>
+    </g>
+  </g>
+</svg>

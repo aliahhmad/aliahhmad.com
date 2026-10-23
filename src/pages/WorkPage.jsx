@@ -6,6 +6,7 @@ import AliAhhmadProject from "../components/work-details/AliAhhmadProject"
 import AppBreweryProject from "../components/work-details/AppBreweryProject"
 import LendingClubProject from "../components/work-details/LendingClubProject"
 import TrafficRoutingProject from "../components/work-details/TrafficRoutingProject"
+import CampusPointProject from "../components/work-details/CampusPointProject"
 import usePageMetadata from "../hooks/usePageMetadata";
 import works from "../data/allWorks.json";
 
@@ -14,7 +15,8 @@ const workPages = {
   2: <AliAhhmadProject />,
   3: <AppBreweryProject />,
   4: <LendingClubProject />,
-  5: <TrafficRoutingProject />
+  5: <TrafficRoutingProject />,
+  6: <CampusPointProject />
 };
 
 // Resolves a project detail view from the route param and shared work metadata.

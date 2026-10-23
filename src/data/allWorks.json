@@ -38,5 +38,12 @@
     "date": "January 2026 - May 2026",
     "description": "An AI project that models New York State roads as a probabilistic graph, using UCS, A* search, traffic-aware costs, and Monte Carlo simulation to find routes that balance speed and reliability under uncertain congestion.",
     "image": "/projects/trafficrouting/results.png"
+  },
+  {
+    "id": 6,
+    "title": "CampusPoint (Campus Request & Response Platform)",
+    "type": "Web Development",
+    "description": "A campus request-and-response platform with points-based rewards, escrow, moderation, and administrator conflict resolution, built with React, FastAPI, and native PostgreSQL two-phase commit across two services.",
+    "image": "/projects/campuspoint/home_page.png"
   }
 ]

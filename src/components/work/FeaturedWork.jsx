@@ -6,10 +6,10 @@ const FeaturedWork = () => {
   const navigate = useNavigate();
 
   // Keep this list explicit so homepage curation stays separate from raw data order.
-  const featuredWordId = [1, 2, 3, 4, 5];
-  const featuredProjects = projects.filter((item) =>
-    featuredWordId.includes(item.id),
-  );
+  const featuredProjectId = [6, 1, 2, 3, 4, 5];
+  const featuredProjects = featuredProjectId
+    .map((id) => projects.find((project) => project.id === id))
+    .filter(Boolean);
 
   function handleClick(path) {
     navigate(path);

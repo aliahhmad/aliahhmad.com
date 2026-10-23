@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" fill="none">
+  <title>CampusPoint service architecture</title>
+  <desc>The React frontend calls Campus API, which coordinates with Points API over authenticated HTTP. Each API owns a separate PostgreSQL database.</desc>
+  <defs>
+    <linearGradient id="background" x2="1200" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#18272B"/>
+      <stop offset="1" stop-color="#121315"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="m1 1 8 4-8 4" stroke="#8DBFB2" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <path fill="url(#background)" d="M0 0h1200v640H0z"/>
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <text x="80" y="86" fill="#A5D8C8" font-size="16" letter-spacing="3">CAMPUS REQUESTS · SHARED REWARDS</text>
+    <text x="80" y="150" fill="#F4F6F6" font-size="52" font-weight="700">CampusPoint</text>
+    <text x="80" y="187" fill="#A6B2B4" font-size="21">Two services. Separate databases. Durable coordination.</text>
+
+    <g fill="#FFFFFF" fill-opacity=".04" stroke="#FFFFFF" stroke-opacity=".2">
+      <rect x="80" y="255" width="260" height="120" rx="18"/>
+      <rect x="470" y="255" width="260" height="120" rx="18"/>
+      <rect x="860" y="255" width="260" height="120" rx="18"/>
+      <rect x="470" y="465" width="260" height="100" rx="18"/>
+      <rect x="860" y="465" width="260" height="100" rx="18"/>
+    </g>
+    <g stroke="#8DBFB2" stroke-width="2" marker-end="url(#arrow)">
+      <path d="M350 315h110"/>
+      <path d="M740 315h110" marker-start="url(#arrow)"/>
+      <path d="M600 385v70"/>
+      <path d="M990 385v70"/>
+    </g>
+    <g fill="#F4F6F6" font-size="26" font-weight="600" text-anchor="middle">
+      <text x="210" y="306">Frontend</text>
+      <text x="600" y="306">Campus API</text>
+      <text x="990" y="306">Points API</text>
+    </g>
+    <g fill="#A6B2B4" font-size="18" text-anchor="middle">
+      <text x="210" y="341">React · Vite · Bootstrap</text>
+      <text x="600" y="341">Requests + 2PC coordinator</text>
+      <text x="990" y="341">Wallets + escrow + rewards</text>
+      <text x="405" y="293" font-size="14">HTTP</text>
+      <text x="795" y="293" font-size="14">2PC / HTTP</text>
+      <text x="600" y="504" fill="#E2E9E7" font-size="23">Campus PostgreSQL</text>
+      <text x="600" y="537">Records + coordinator state</text>
+      <text x="990" y="504" fill="#E2E9E7" font-size="23">Points PostgreSQL</text>
+      <text x="990" y="537">Ledger + participant journal</text>
+    </g>
+    <text x="80" y="492" fill="#A5D8C8" font-size="26" font-weight="600">5-point escrow</text>
+    <text x="80" y="529" fill="#A6B2B4" font-size="20">1-hour request lifetime</text>
+  </g>
+</svg>

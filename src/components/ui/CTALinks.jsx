@@ -1,7 +1,7 @@
 // Shared CTA row for project pages with support for glass and outline variants.
 function CTALinks({ links }) {
   return (
-    <div className="flex gap-3">
+    <div className="flex flex-wrap gap-3">
       {links.map((link) =>
         // Disabled links stay visually present so users still see planned destinations.
         link.type === "glass-flat" ? (
