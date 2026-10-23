@@ -10,6 +10,7 @@ import ExperiencePage from './pages/ExperiencePage'
 import { Toaster } from 'react-hot-toast'
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import WelcomePopup from './components/ui/WelcomePopup'
 
 // Registers the app's top-level routes and global UI providers.
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/blog/:id" element={<BlogPage />} />
       </Routes>
       {/* Global utilities stay mounted once so any page can trigger them. */}
+      <WelcomePopup />
       <Toaster position="top-center" />
       <Analytics />
       <SpeedInsights />
