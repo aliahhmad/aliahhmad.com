@@ -130,15 +130,14 @@ const SchdlrProject = () => {
           ]}
         />
 
-        {/* CTA links — disabled while in development */}
+        {/* CTA links */}
         <div className="flex gap-3">
           <CTALinks
             links={[
               {
-                label: "Live Site — Coming Soon",
-                href: "#",
+                label: "Live Site ↗",
+                href: "https://schdlr.aliahhmad.dev/",
                 type: "glass-flat",
-                disabled: true,
               },
               {
                 label: "GitHub ↗",
@@ -152,7 +151,7 @@ const SchdlrProject = () => {
 
       {/* ── Hero screenshot placeholder ── */}
       <BrowserFrame
-        url="schdlr.com/home"
+        url="schdlr.aliahhmad.dev"
         imageSrc="/projects/schdlr/home_page.png"
         altText="Project Screenshot"
       />

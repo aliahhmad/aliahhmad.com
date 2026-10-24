@@ -130,7 +130,7 @@ function CampusPointProject() {
         <CTALinks links={[
           {
             label: "Live Site ↗",
-            href: "https://campus-project-rit.vercel.app/",
+            href: "https://cp-rit.aliahhmad.dev/",
             type: "glass-flat",
           },
           {
@@ -147,7 +147,7 @@ function CampusPointProject() {
       </header>
 
       <BrowserFrame
-        url="campus-project-rit.vercel.app"
+        url="cp-rit.aliahhmad.dev"
         imageSrc="/projects/campuspoint/home_page.png"
         altText="CampusPoint home page introducing campus questions, helpful responses, and points-based rewards for the RIT community."
       />
