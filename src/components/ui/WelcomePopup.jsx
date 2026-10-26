@@ -111,6 +111,18 @@ function WelcomePopup() {
             Maybe later
           </button>
         </div>
+        <p className="border-t border-white/10 pt-4 text-sm text-white/40">
+          Psst… want to see a project before everyone else?{" "}
+          <a
+            href="https://headsup.aliahhmad.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closePopup}
+            className="rounded-sm underline decoration-white/20 underline-offset-4 transition hover:text-white/80 hover:decoration-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          >
+            Take a sneak peek ↗
+          </a>
+        </p>
       </div>
     </dialog>
   );
