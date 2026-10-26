@@ -42,6 +42,14 @@ function AllDemos() {
           </article>
         ))}
       </div>
+      <div className="flex justify-end">
+        <Link
+          to="/work"
+          className="text-lg text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        >
+          Back to all works →
+        </Link>
+      </div>
     </main>
   );
 }

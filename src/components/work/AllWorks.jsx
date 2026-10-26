@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import projects from "../../data/allWorks.json"
 
 const typeOrder = ["Web Development", "AI/ML", "Courses"];
@@ -20,6 +20,17 @@ const AllWorks = () => {
           machine learning. Pick a project to see how it works and what went into
           building it.
         </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <p className="text-white/60 text-lg">
+            Want to jump straight to projects with live demos? Check them out here.
+          </p>
+          <Link
+            to="/demos"
+            className="glass-flat rounded-full px-5 py-2 text-base font-semibold text-white transition hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          >
+            View all demos →
+          </Link>
+        </div>
       </header>
       {typeOrder.map((type) => (
         <div key={type} className="flex flex-col gap-4">
