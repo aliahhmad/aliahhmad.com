@@ -9,6 +9,7 @@ import FeatureCards from "../ui/FeatureCards";
 import TechStackCards from "../ui/TechStackCards";
 import SimpleArchitectureFlow from "../ui/SimpleArchitectureFlow";
 import ScreenshotGallery from "../ui/ScreenshotGallery";
+import RequestDemoButton from "../ui/RequestDemoButton";
 
 const TABS = ["Overview", "Features", "Tech Stack", "Transactions", "Testing", "Screenshots"];
 
@@ -127,23 +128,26 @@ function CampusPointProject() {
           services.
         </p>
         <SmallPills items={["React", "Vite", "Bootstrap", "FastAPI", "PostgreSQL", "Docker", "Two-Phase Commit"]} />
-        <CTALinks links={[
-          {
-            label: "Live Site ↗",
-            href: "https://cp-rit.aliahhmad.dev/",
-            type: "glass-flat",
-          },
-          {
-            label: "Frontend GitHub ↗",
-            href: "https://github.com/aliahhmad/campus_point_rit_frontend",
-            type: "outline",
-          },
-          {
-            label: "Backend GitHub ↗",
-            href: "https://github.com/aliahhmad/campus_point_rit_backend",
-            type: "outline",
-          },
-        ]} />
+        <div className="flex flex-wrap gap-3">
+          <RequestDemoButton demoId="campuspoint" />
+          <CTALinks links={[
+            {
+              label: "Live Site ↗",
+              href: "https://cp-rit.aliahhmad.dev/",
+              type: "glass-flat",
+            },
+            {
+              label: "Frontend GitHub ↗",
+              href: "https://github.com/aliahhmad/campus_point_rit_frontend",
+              type: "outline",
+            },
+            {
+              label: "Backend GitHub ↗",
+              href: "https://github.com/aliahhmad/campus_point_rit_backend",
+              type: "outline",
+            },
+          ]} />
+        </div>
       </header>
 
       <BrowserFrame

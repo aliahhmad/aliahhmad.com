@@ -1,4 +1,9 @@
 import { MailtrapClient } from "mailtrap";
+import demos, { demoRoles } from "../src/data/demos.js";
+
+const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => ({
+  "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+})[character]);
 
 // Create the Mailtrap client once per serverless instance so repeated requests
 // can reuse it while the function stays warm.
@@ -17,9 +22,26 @@ export default async function handler(req, res) {
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
-  const { message, email } = req.body;
+  const { type, projectId, name, role, message, email } = req.body || {};
+  const isDemoRequest = type === "demo-request";
+  const demo = demos.find((item) => item.id === projectId);
 
-  if (!message) return res.status(400).json({ error: "Message is required" });
+  if (typeof message !== "string" || !message.trim() || message.length > 1000) {
+    return res.status(400).json({ error: "A message of up to 1,000 characters is required" });
+  }
+  if (isDemoRequest && (
+    !demo ||
+    typeof name !== "string" || !name.trim() || name.length > 100 ||
+    typeof email !== "string" || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
+    !demoRoles.includes(role)
+  )) {
+    return res.status(400).json({ error: "A valid project, name, email, and visitor type are required" });
+  }
+
+  const submission = isDemoRequest
+    ? `Project: ${demo.name}\nName: ${name.trim()}\nEmail: ${email}\nVisitor type: ${role}\n\nReason for requesting a demo:\n${message.trim()}`
+    : `Message: ${message}\nReply to: ${email || "No email provided"}`;
+  const title = isDemoRequest ? `Demo request: ${demo.name}` : "New Contact Form Submission";
 
   try {
     await mailtrapClient.send({
@@ -27,13 +49,12 @@ export default async function handler(req, res) {
       // email in the message body for follow-up.
       from: { email: "noreply@aliahhmad.com", name: "Portfolio Contact Form" },
       to: [{ email: "aliahhmadp@gmail.com" }],
-      subject: "New message from portfolio",
+      subject: isDemoRequest ? `Demo request: ${demo.name}` : "New message from portfolio",
       html: `
-        <h3>New Contact Form Submission</h3>
-        <p><strong>Message:</strong> ${message}</p>
-        <p><strong>Reply to:</strong> ${email || "No email provided"}</p>
+        <h3>${title}</h3>
+        <p style="white-space: pre-wrap">${escapeHtml(submission)}</p>
       `,
-      text: `Message: ${message}\nReply to: ${email || "No email provided"}`,
+      text: submission,
     });
 
     res.json({ success: true });

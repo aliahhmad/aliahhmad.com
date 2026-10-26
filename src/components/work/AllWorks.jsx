@@ -13,7 +13,14 @@ const AllWorks = () => {
 
   return (
     <section className="bg-surface-deep flex flex-col gap-6 py-2 px-10">
-      <h1 className="text-white text-2xl">All Works</h1>
+      <header className="flex flex-col gap-3">
+        <h1 className="text-white text-2xl">All Works</h1>
+        <p className="text-white/60 text-lg">
+          Explore the projects I've been working on, from web applications to
+          machine learning. Pick a project to see how it works and what went into
+          building it.
+        </p>
+      </header>
       {typeOrder.map((type) => (
         <div key={type} className="flex flex-col gap-4">
           <h2 className="text-white text-xl">{type}</h2>

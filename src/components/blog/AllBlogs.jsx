@@ -11,7 +11,13 @@ function AllBlogs() {
 
   return (
     <section className="bg-surface-deep flex flex-col gap-6 py-2 px-10">
-      <h1 className="text-white text-2xl">All Blogs</h1>
+      <header className="flex flex-col gap-3">
+        <h1 className="text-white text-2xl">All Blogs</h1>
+        <p className="text-white/60 text-lg">
+          Thoughts, lessons, and discoveries from my journey as a developer. Pick a
+          post to read about what I've been learning and building.
+        </p>
+      </header>
       {blogs.map((blog) => (
         <article
           key={blog.id}

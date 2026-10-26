@@ -15,7 +15,7 @@ const outputPath = path.join(publicDir, "sitemap.xml");
 const siteUrl = "https://www.aliahhmad.com";
 const lastmod = new Date().toISOString().split("T")[0];
 
-const staticRoutes = ["/", "/work", "/blog", "/experiences"];
+const staticRoutes = ["/", "/work", "/demos", "/blog", "/experiences"];
 const workRoutes = allWorks.map((work) => `/work/${work.id}`);
 const blogRoutes = allBlogs.map((blog) => `/blog/${blog.id}`);
 const experienceRoutes = allExperiences.map(

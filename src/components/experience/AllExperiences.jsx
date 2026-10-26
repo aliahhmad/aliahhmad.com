@@ -3,9 +3,9 @@ import experiences from "../../data/allExperiences.json";
 
 function AllExperiences() {
   return (
-    <section className="bg-surface-deep flex flex-col gap-6 py-2 px-6 sm:px-10">
+    <section className="bg-surface-deep flex flex-col gap-6 py-2 px-10">
       <header className="flex flex-col gap-3">
-        <h1 className="text-white text-3xl font-bold">All Experiences</h1>
+        <h1 className="text-white text-2xl">All Experiences</h1>
         <p className="text-white/60 text-lg">
           My work in frontend development, workflow automation, and machine
           learning.

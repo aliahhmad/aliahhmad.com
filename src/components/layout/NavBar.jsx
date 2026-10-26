@@ -68,7 +68,7 @@ const Navbar = () => {
     <>
       {/* Floating bottom nav keeps primary routes reachable across long pages. */}
       <nav
-        className={`fixed left-1/2 -translate-x-1/2 z-[9998] glass flex items-center gap-1 px-2 h-16 rounded-xl transition-all duration-300 ${
+        className={`fixed left-1/2 -translate-x-1/2 z-[9998] glass flex items-center gap-0.5 sm:gap-1 px-2 h-16 rounded-xl transition-all duration-300 ${
           visible ? "bottom-8" : "-bottom-24"
         }`}
       >
@@ -85,7 +85,7 @@ const Navbar = () => {
                   ? () => setContactFromOpen(true)
                   : () => navigate(item.path)
               }
-              className="group flex flex-col items-center gap-1 px-2 sm:px-4 py-2 rounded-xl transition-transform duration-200 hover:scale-[1.05]"
+              className="group flex flex-col items-center gap-1 px-1 sm:px-4 py-2 rounded-xl transition-transform duration-200 hover:scale-[1.05]"
               aria-current={isActive ? "page" : undefined}
             >
               <span
@@ -94,7 +94,7 @@ const Navbar = () => {
                 {item.icon}
               </span>
               <span
-                className={`text-xs ${isActive ? "text-white" : "text-white/50 group-hover:text-white/80"}`}
+                className={`text-[10px] min-[380px]:text-xs ${isActive ? "text-white" : "text-white/50 group-hover:text-white/80"}`}
               >
                 {item.label}
               </span>

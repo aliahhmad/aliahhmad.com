@@ -9,6 +9,7 @@ import FeatureCards from "../ui/FeatureCards";
 import TechStackCards from "../ui/TechStackCards";
 import SimpleArchitectureFlow from "../ui/SimpleArchitectureFlow";
 import ScreenshotGallery from "../ui/ScreenshotGallery";
+import RequestDemoButton from "../ui/RequestDemoButton";
 
 const TABS = ["Overview", "Features", "Tech Stack", "Roadmap", "Screenshots"];
 
@@ -131,7 +132,8 @@ const SchdlrProject = () => {
         />
 
         {/* CTA links */}
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-3">
+          <RequestDemoButton demoId="schdlr" />
           <CTALinks
             links={[
               {

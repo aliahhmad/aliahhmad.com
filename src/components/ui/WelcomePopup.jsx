@@ -27,7 +27,13 @@ function WelcomePopup() {
 
     const dialog = dialogRef.current;
 
-    const timer = window.setTimeout(() => {
+    let timer;
+    const showAnnouncement = () => {
+      // Let visitors finish an open form before showing the announcement.
+      if (document.querySelector("dialog[open]") || document.body.style.overflow === "hidden") {
+        timer = window.setTimeout(showAnnouncement, 1000);
+        return;
+      }
       dialog.showModal();
       previousOverflowRef.current = document.body.style.overflow;
       document.body.style.overflow = "hidden";
@@ -38,7 +44,8 @@ function WelcomePopup() {
       } catch {
         // The popup remains usable when storage is unavailable.
       }
-    }, SHOW_DELAY_MS);
+    };
+    timer = window.setTimeout(showAnnouncement, SHOW_DELAY_MS);
 
     return () => {
       window.clearTimeout(timer);
