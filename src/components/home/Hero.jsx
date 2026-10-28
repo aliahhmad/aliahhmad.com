@@ -15,7 +15,7 @@ const Hero = () => {
         </header>
         <div className="w-32 h-36 sm:w-48 sm:h-56 rounded-3xl overflow-hidden rotate-[2deg] wiggle cursor-pointer flex-shrink-0">
           <img
-            src="/home/profile_picture.jpg"
+            src="/home/profile_picture_1.jpg"
             alt="Ali"
             className="w-full h-full object-cover"
           />
