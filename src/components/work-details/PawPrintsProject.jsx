@@ -113,7 +113,7 @@ function PawPrintsProject() {
       <section className="glass-flat rounded-xl p-5 flex flex-col gap-3">
         <p className="text-white/50 text-sm uppercase tracking-wide">Role & Context</p>
         <h2 className="text-white text-lg font-semibold">
-          Frontend Developer · RIT Student Government (SG RIT)
+          Frontend Developer · Rochester Institute of Technology
         </h2>
         <p className="text-white/60 text-sm">September 2026 – Present</p>
         <p className="text-white/70 leading-relaxed">
