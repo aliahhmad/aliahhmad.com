@@ -73,7 +73,7 @@ function DemoRequestForm({ demo, onClose }) {
         <X size={20} aria-hidden="true" />
       </button>
       <div className="flex gap-4 items-center pr-6 mb-6">
-        <img src="/home/profile_picture.jpg" alt="Ali Ahmad" className="w-12 h-12 rounded-full object-cover flex-shrink-0" />
+        <img src="/home/profile_picture_1.jpg" alt="Ali Ahmad" className="w-12 h-12 rounded-full object-cover flex-shrink-0" />
         <div className="border-l border-white/40 pl-4">
           <h2 id={`${formId}-title`} className="text-lg font-semibold">Request a {demo.name} demo</h2>
           <p id={`${formId}-description`} className="text-white/70 text-sm leading-relaxed mt-1">Tell me a little about yourself. I'll follow up by email with the next steps for trying the live site.</p>

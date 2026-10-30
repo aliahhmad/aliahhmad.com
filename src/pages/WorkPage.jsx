@@ -7,6 +7,7 @@ import AppBreweryProject from "../components/work-details/AppBreweryProject"
 import LendingClubProject from "../components/work-details/LendingClubProject"
 import TrafficRoutingProject from "../components/work-details/TrafficRoutingProject"
 import CampusPointProject from "../components/work-details/CampusPointProject"
+import PawPrintsProject from "../components/work-details/PawPrintsProject"
 import usePageMetadata from "../hooks/usePageMetadata";
 import works from "../data/allWorks.json";
 
@@ -16,7 +17,8 @@ const workPages = {
   3: <AppBreweryProject />,
   4: <LendingClubProject />,
   5: <TrafficRoutingProject />,
-  6: <CampusPointProject />
+  6: <CampusPointProject />,
+  7: <PawPrintsProject />
 };
 
 // Resolves a project detail view from the route param and shared work metadata.
@@ -26,7 +28,7 @@ function WorkPage() {
 
   const workDetails = works.find((work) => work.id === Number(id));
   // The title is driven from the shared work data so cards and detail pages stay in sync.
-  usePageMetadata({ title: workDetails.title, path: `/work/${id}` });
+  usePageMetadata({ title: workDetails.title, path: `/work/${id}`, description: workDetails.description });
 
   return (
     <div className="relative max-w-4xl mx-auto pt-10">

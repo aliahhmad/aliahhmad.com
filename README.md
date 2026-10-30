@@ -19,6 +19,7 @@ The frontend is deployed alongside `api/contact.js`, which forwards contact subm
 - Sticky Mapbox background on the home page with Rochester time display
 - Floating bottom navigation shared across the site
 - Work listing plus dedicated project detail pages for:
+  - PawPrints frontend redesign showcase, connected to the Frontend Developer role at RIT Student Government
   - Schdlr
   - aliahhmad.com
   - App Brewery course projects

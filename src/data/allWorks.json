@@ -45,5 +45,12 @@
     "type": "Web Development",
     "description": "A campus request-and-response platform with points-based rewards, escrow, moderation, and administrator conflict resolution, built with React, FastAPI, and native PostgreSQL two-phase commit across two services.",
     "image": "/projects/campuspoint/home_page.png"
+  },
+  {
+    "id": 7,
+    "title": "PawPrints (RIT Student Government)",
+    "type": "Web Development",
+    "description": "A frontend redesign of RIT Student Government’s petition platform, built as a personal showcase alongside my Frontend Developer role at SG RIT. Uses Next.js, React, and TypeScript with original/new design comparison and local petition workflows.",
+    "image": "/projects/pawprints/petitions_page.png"
   }
 ]

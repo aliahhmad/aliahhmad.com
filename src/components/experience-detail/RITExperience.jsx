@@ -58,6 +58,22 @@ function RITExperience() {
         </ul>
       </section>
 
+      <section className="glass-flat rounded-xl p-5 sm:p-6 flex flex-col gap-3">
+        <h2 className="text-2xl font-semibold">PawPrints Frontend Showcase</h2>
+        <p className="text-white/70 leading-relaxed">
+          Alongside my work on the platform, I built a personal redesign demo to
+          help the SG team explore new layouts, navigation, and petition
+          workflows. The showcase includes the original and redesigned
+          interfaces with shared local sample data.
+        </p>
+        <Link
+          to="/work/7"
+          className="text-white/80 hover:text-white hover:underline self-start rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+        >
+          Explore the PawPrints project →
+        </Link>
+      </section>
+
       <MoreExperiences currentId={experience.id} />
       <Link
         to="/experiences"

@@ -88,7 +88,7 @@ function ContactForm({ isOpen, onClose }) {
       </button>
       <div className="flex gap-4 items-center pr-6 mb-6">
         <img
-          src="/home/profile_picture.jpg"
+          src="/home/profile_picture_1.jpg"
           alt="Ali Ahmad"
           className="w-12 h-12 rounded-full object-cover flex-shrink-0"
         />
